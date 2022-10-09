@@ -1,0 +1,23 @@
+{
+  "name": "jrisner",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "astro build",
+    "clean": "rm -R ./dist",
+    "dev": "astro dev",
+    "format": "prettier --list-different .",
+    "format:ci": "prettier --check .",
+    "preview": "astro preview",
+    "start": "astro dev"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^1.0.0",
+    "astro": "^1.4.6"
+  }
+}
