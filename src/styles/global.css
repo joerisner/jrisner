@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Extend tailwind preflight base styles */
+@layer base {
+  body {
+    @apply bg-[#0d1117] font-primary text-primary;
+  }
+}
