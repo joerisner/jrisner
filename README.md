@@ -1,6 +1,6 @@
 # jrisner.dev
 
-My personal site found at https://jrisner.dev
+My personal site found at <https://jrisner.dev>
 
 ## Technologies
 

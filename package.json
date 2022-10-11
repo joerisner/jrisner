@@ -8,19 +8,23 @@
     "build": "astro build",
     "clean": "rm -R ./dist",
     "dev": "astro dev",
-    "format": "prettier --list-different .",
-    "format:ci": "prettier --check .",
+    "format": "prettier . --list-different",
+    "format:ci": "prettier . --check",
+    "lint:js": "eslint \"./**/*.{js,cjs,mjs}\"",
+    "lint:md": "markdownlint \"**/*.md\" --ignore node_modules",
     "preview": "astro preview",
     "start": "astro dev"
   },
   "devDependencies": {
-    "prettier": "^2.7.1"
-  },
-  "dependencies": {
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "2.0.2",
     "astro": "^1.4.6",
     "autoprefixer": "^10.4.12",
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "markdownlint-cli": "^0.32.2",
+    "prettier": "^2.7.1",
     "tailwindcss": "^3.1.8"
   }
 }
