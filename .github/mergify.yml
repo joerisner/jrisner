@@ -3,6 +3,8 @@ pull_request_rules:
     conditions:
       - author~=^dependabot(|-preview)\[bot\]$
       - base=master
+      - check-success=lint
+      - check-success=yarn-audit
       - title~=^Bump [^\s]+ from ([\d]+)\..+ to \1\.
     actions:
       merge:
