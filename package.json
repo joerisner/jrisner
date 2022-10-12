@@ -7,6 +7,8 @@
   "scripts": {
     "build": "astro build",
     "clean": "rm -R ./dist",
+    "cy:open": "cypress open --e2e --browser chrome",
+    "cy:run": "cypress run --quiet --browser chrome",
     "dev": "astro dev",
     "format": "prettier . --list-different",
     "format:ci": "prettier . --check",
@@ -20,7 +22,9 @@
     "@astrojs/tailwind": "2.0.2",
     "astro": "^1.4.7",
     "autoprefixer": "^10.4.12",
+    "cypress": "^10.10.0",
     "eslint": "^8.25.0",
+    "eslint-plugin-cypress": "^2.12.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "markdownlint-cli": "^0.32.2",

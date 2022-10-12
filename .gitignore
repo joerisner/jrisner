@@ -10,3 +10,8 @@ yarn-error.log*
 
 # Environment
 .env
+
+# Cypress
+cypress/downloads/
+cypress/videos/
+cypress/screenshots/
