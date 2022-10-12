@@ -8,5 +8,7 @@ const { href, linkText } = Astro.props;
 ---
 
 <li class="px-12">
-  <a href={href} class="hover:text-gray-400 hover:underline hover:underline-offset-8">{linkText}</a>
+  <a href={href} class="hover:text-gray-400 hover:underline hover:underline-offset-8" data-testid={`navLink${linkText}`}
+    >{linkText}</a
+  >
 </li>
