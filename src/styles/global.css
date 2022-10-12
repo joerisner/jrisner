@@ -5,6 +5,8 @@
 /* Extend tailwind preflight base styles */
 @layer base {
   body {
-    @apply bg-[#0d1117] font-primary text-primary;
+    @apply flex flex-col min-h-screen; /* Pin footer to bottom */
+    @apply bg-black bg-gradient-to-b from-black to-slate-900 bg-no-repeat bg-cover bg-center; /* Background */
+    @apply font-primary text-primary;
   }
 }
