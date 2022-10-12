@@ -1,0 +1,12 @@
+---
+export interface Props {
+  href: string;
+  linkText: string;
+}
+
+const { href, linkText } = Astro.props;
+---
+
+<li class="px-12">
+  <a href={href} class="hover:text-gray-400 hover:underline hover:underline-offset-8">{linkText}</a>
+</li>
