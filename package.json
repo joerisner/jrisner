@@ -6,7 +6,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "astro build",
-    "clean": "rm -R ./dist",
+    "clean": "node ./scripts/clean.js",
     "cy:open": "cypress open --e2e --browser chrome",
     "cy:run": "cypress run --quiet --browser chrome",
     "dev": "astro dev",
