@@ -2,14 +2,14 @@
 import HeaderLink from './HeaderLink.astro';
 ---
 
-<header class="flex flex-row">
-  <nav class="mx-auto py-4" data-testid="navBar">
+<header class="mx-auto">
+  <nav class="py-4" data-testid="navBar">
     <ul class="flex px-4 items-center text-xl">
-      <HeaderLink href="/" linkText="Home" />
-      <HeaderLink href="/blog" linkText="Blog" />
-      <li class="px-4"><a href="/"><img src="/logo.svg" /></a></li>
-      <HeaderLink href="/about" linkText="About" />
-      <HeaderLink href="/resume" linkText="Resume" />
+      <HeaderLink href="/" linkText="home" />
+      <HeaderLink href="/blog" linkText="blog" />
+      <li class="px-4"><a href="/"><img alt="Joseph logo link to home" src="/logo.svg" /></a></li>
+      <HeaderLink href="/about" linkText="about" />
+      <HeaderLink href="/resume" linkText="resume" />
     </ul>
   </nav>
 </header>

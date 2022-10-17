@@ -17,7 +17,7 @@ const { title, description, socialImage } = Astro.props;
   <Head title={title} description={description} socialImage={socialImage} />
   <body>
     <Header />
-    <main class="container flex mx-auto flex-grow max-w-5xl">
+    <main class="container flex flex-col flex-grow lg:px-0 max-w-5xl mx-auto px-5">
       <slot />
     </main>
     <Footer />
