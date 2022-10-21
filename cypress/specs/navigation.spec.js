@@ -1,10 +1,12 @@
+import { capitalize } from '../support/utils';
+
 describe('Navigation', () => {
   it('has expected navigation link behavior', () => {
     const navLinks = [
-      { text: 'Home', path: '/', title: 'Joseph Risner' },
-      { text: 'Blog', path: '/blog' },
-      { text: 'About', path: '/about' },
-      { text: 'Resume', path: '/resume' },
+      { text: 'home', path: '/', title: 'Joseph Risner' },
+      { text: 'blog', path: '/blog' },
+      { text: 'about', path: '/about' },
+      { text: 'resume', path: '/resume' },
     ];
 
     cy.goto('/');
@@ -16,7 +18,7 @@ describe('Navigation', () => {
       if (navLink.title) {
         cy.title().should('eq', navLink.title);
       } else {
-        cy.title().should('eq', `${navLink.text} | Joseph Risner`);
+        cy.title().should('eq', `${capitalize(navLink.text)} | Joseph Risner`);
       }
     });
   });
