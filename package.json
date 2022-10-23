@@ -14,8 +14,7 @@
     "format:ci": "prettier . --check",
     "lint:js": "eslint \"./**/*.{js,cjs,mjs}\"",
     "lint:md": "markdownlint \"**/*.md\" --ignore node_modules",
-    "preview": "astro preview",
-    "start": "astro dev"
+    "preview": "astro preview"
   },
   "devDependencies": {
     "@astrojs/sitemap": "^1.0.0",

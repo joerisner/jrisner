@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../config';
 ---
 
-<!-- TODO: Update to pass in the resource type -->
-<BaseLayout title="Resume | Joseph Risner" />
+<BaseLayout title={`Resume | ${SITE_TITLE}`} />

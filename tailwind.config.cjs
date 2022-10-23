@@ -8,11 +8,13 @@ module.exports = {
   plugins: [],
   theme: {
     extend: {
+      colors: {
+        'accent-purple': '#a16ae8',
+      },
       fontFamily: {
         primary: ['Roboto', ...fontFamily.sans],
       },
       textColor: {
-        'accent-purple': '#a16ae8',
         primary: '#d4d4d4',
       },
     },
