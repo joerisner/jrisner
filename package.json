@@ -6,6 +6,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "astro build",
+    "check": "astro check",
     "clean": "node ./scripts/clean.js",
     "cy:open": "cypress open --e2e --browser chrome",
     "cy:run": "cypress run --quiet --browser chrome",
@@ -14,7 +15,7 @@
     "format:ci": "prettier . --check",
     "lint:js": "eslint \"./**/*.{js,cjs,mjs}\"",
     "lint:md": "markdownlint \"**/*.md\" --ignore node_modules",
-    "preview": "astro preview"
+    "preview": "yarn build && astro preview"
   },
   "devDependencies": {
     "@astrojs/sitemap": "^1.0.0",
