@@ -34,6 +34,9 @@ jobs:
           cache: 'yarn'
       - run: yarn install --immutable
 
+      - name: astro-check
+        run: yarn check
+
       - name: eslint
         run: yarn lint:js
 
