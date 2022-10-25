@@ -6,4 +6,4 @@ My personal site found at <https://jrisner.dev>
 
 - :zap: Framework: [Astro](https://astro.build/)
 - :zap: CSS: [Tailwind CSS](https://tailwindcss.com/)
-- :zap: Tests: [Cypress](https://cypress.io)
+- :zap: Tests: [Playwright](https://playwright.dev)
