@@ -4,10 +4,12 @@ import NavLink from './NavLink.astro';
 
 <header class="mx-auto">
   <nav class="py-4" data-testid="navBar">
-    <ul class="flex px-4 items-center text-xl">
+    <ul class="flex px-4 items-center text-xl justify-center">
       <NavLink href="/" linkText="home" />
       <NavLink href="/blog" linkText="blog" />
-      <li class="px-4"><a href="/"><img alt="Joseph logo link to home" src="/logo.svg" /></a></li>
+      <li class="px-4">
+        <a href="/"><img alt="Joseph logo link to home" src="/joseph_purple.png" width="135" height="70" /></a>
+      </li>
       <NavLink href="/about" linkText="about" />
       <NavLink href="/resume" linkText="resume" />
     </ul>
