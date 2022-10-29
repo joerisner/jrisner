@@ -14,3 +14,6 @@ yarn-error.log*
 # Playwright
 specs/report/
 /playwright/.cache/
+
+# ESLint
+.eslintcache
