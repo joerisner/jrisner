@@ -1,9 +1,6 @@
 import type { PlaywrightTestConfig } from '@playwright/test';
 import { devices } from '@playwright/test';
 
-// Read environment variables from file. See https://github.com/motdotla/dotenv
-// require('dotenv').config();
-
 // See https://playwright.dev/docs/test-configuration.
 const config: PlaywrightTestConfig = {
   expect: {
@@ -25,7 +22,7 @@ const config: PlaywrightTestConfig = {
       },
     },
   ],
-  reporter: [['html', { open: 'never', outputFolder: './specs/report' }]], // Reporter to use. See https://playwright.dev/docs/test-reporters
+  reporter: [['dot'], ['html', { open: 'never', outputFolder: './specs/report' }]], // Reporter to use. See https://playwright.dev/docs/test-reporters
   retries: process.env.CI ? 2 : 0, // Retry on CI only
   testDir: './specs',
   timeout: 30 * 1000, // Maximum time one test can run for
