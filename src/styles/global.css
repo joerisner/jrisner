@@ -9,4 +9,8 @@
     @apply bg-black bg-gradient-to-b from-black to-slate-900 bg-cover bg-center bg-no-repeat; /* Background */
     @apply font-primary text-primary;
   }
+
+  p {
+    @apply my-4;
+  }
 }
