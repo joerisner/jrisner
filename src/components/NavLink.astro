@@ -7,6 +7,4 @@ export interface Props {
 const { href, linkText } = Astro.props;
 ---
 
-<li class="px-12">
-  <a href={href} class="hover:text-slate-400" data-testid="navLink">{linkText}</a>
-</li>
+<li><a href={href} class="hover:text-slate-400" data-testid="navLink">{linkText}</a></li>

@@ -1,0 +1,19 @@
+---
+import Badge from './Badge.astro';
+
+export interface Props {
+  badgeTexts: Array<string>;
+}
+
+const { badgeTexts } = Astro.props;
+---
+
+<ul class="flex flex-wrap gap-4">
+  {
+    badgeTexts.map((badgeText) => (
+      <li>
+        <Badge text={badgeText} />
+      </li>
+    ))
+  }
+</ul>
