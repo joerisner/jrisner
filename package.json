@@ -21,7 +21,7 @@
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "2.1.1",
     "@playwright/test": "^1.27.1",
-    "astro": "^1.5.2",
+    "astro": "^1.6.1",
     "autoprefixer": "^10.4.12",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
