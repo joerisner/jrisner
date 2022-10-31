@@ -1,13 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Badge from '../components/Badge.astro';
+import Heading from '../components/typography/Heading.astro';
+import BadgeList from '../components/BadgeList.astro';
 import { SITE_TITLE } from '../config';
 ---
 
 <BaseLayout title={`About | ${SITE_TITLE}`}>
-  <h1 class="mt-8 text-4xl text-accent-purple">
-    <span class="text-slate-700">[&nbsp;</span>About Me<span class="text-slate-700">&nbsp;]</span>
-  </h1>
+  <Heading text="About Me" />
   <section class="flex items-center mt-5">
     <div class="w-3/5">
       <p>
@@ -16,13 +15,11 @@ import { SITE_TITLE } from '../config';
         I pored over material to learn HTML & CSS, I realized that being a self-taught developer was completely within
         my grasp, and what I wanted to pursue as a career.
       </p>
-      <br />
       <p>
         Fast-forward to today and I've had the privilege to work as a software engineer in test at two early-stage
         companies, where I've learned not only how to properly test software, but also how to build test frameworks from
         scratch, writing clean, maintainable and reusable code.
       </p>
-      <br />
       <p>
         When I'm not programming, I enjoy spending time with my family in the mountains snowboarding, hiking, and
         camping. And I may or may not have a thing for the 80's...
@@ -41,28 +38,14 @@ import { SITE_TITLE } from '../config';
       />
     </picture>
   </section>
-  <hr class="my-8 w-3/5 border-2 border-slate-700" />
+  <hr class="my-8 w-3/5 border-1 border-slate-700" />
   <section>
-    <h2 class="mb-2 text-2xl text-accent-purple">Here are some technologies I've been working with lately</h2>
-    <h3 class="mb-3 text-lg">Languages</h3>
-    <div class="mb-4">
-      <Badge text="JavaScript" />
-      <Badge text="TypeScript" />
-      <Badge text="Ruby" />
-    </div>
-    <h3 class="mb-3 text-lg">Frameworks</h3>
-    <div class="mb-4">
-      <Badge text="Ruby on Rails" />
-      <Badge text="Astro" />
-      <Badge text="Cypress" />
-      <Badge text="Bridgetown" />
-      <Badge text="Tailwind CSS" />
-      <Badge text="Playwright" />
-    </div>
-    <h3 class="mb-3 text-lg">Tools</h3>
-    <div class="mt-3 mb-4">
-      <Badge text="Node JS" />
-      <Badge text="Docker" />
-    </div>
+    <h2 class="text-2xl text-accent-purple">Here are some technologies I've been working with lately</h2>
+    <h3 class="my-4 text-lg">Languages</h3>
+    <BadgeList badgeTexts={['JavaScript', 'TypeScript', 'Ruby']} />
+    <h3 class="my-4 text-lg">Frameworks</h3>
+    <BadgeList badgeTexts={['Ruby on Rails', 'Astro', 'Cypress', 'Bridgetown', 'Tailwind CSS', 'Playwright']} />
+    <h3 class="my-4 text-lg">Tools</h3>
+    <BadgeList badgeTexts={['Node JS', 'Docker']} />
   </section>
 </BaseLayout>

@@ -1,9 +1,9 @@
-# jrisner.dev
+# [jrisner.dev](https://jrisner.dev)
 
-My personal site found at <https://jrisner.dev>
+My personal portfolio site
 
-## Technologies
+## Built using
 
-- :zap: Framework: [Astro](https://astro.build/)
-- :zap: CSS: [Tailwind CSS](https://tailwindcss.com/)
-- :zap: Tests: [Playwright](https://playwright.dev)
+- [Astro + TypeScript](https://astro.build/) :rocket:
+- [Tailwind CSS](https://tailwindcss.com/) :dash:
+- [Playwright](https://playwright.dev) :performing_arts:
