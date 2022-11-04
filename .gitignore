@@ -12,6 +12,7 @@ yarn-error.log*
 .env
 
 # Playwright
+specs/artifacts/
 specs/report/
 /playwright/.cache/
 

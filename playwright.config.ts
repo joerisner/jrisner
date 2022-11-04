@@ -8,6 +8,7 @@ const config: PlaywrightTestConfig = {
   },
   fullyParallel: true, // Run test blocks within files in parallel
   forbidOnly: !!process.env.CI, // Fail the build on CI for .only left in source code
+  outputDir: './specs/artifacts',
   projects: [
     {
       name: 'chromium',
@@ -22,7 +23,7 @@ const config: PlaywrightTestConfig = {
       },
     },
   ],
-  reporter: [['dot'], ['html', { open: 'never', outputFolder: './specs/report' }]], // Reporter to use. See https://playwright.dev/docs/test-reporters
+  reporter: [['dot'], ['html', { open: 'never', outputFolder: './specs/report' }]],
   retries: process.env.CI ? 2 : 0, // Retry on CI only
   testDir: './specs',
   timeout: 30 * 1000, // Maximum time one test can run for
@@ -30,6 +31,7 @@ const config: PlaywrightTestConfig = {
   use: {
     actionTimeout: 0, // Maximum time each action such as `click()` can take. Defaults to 0 (no limit)
     baseURL: 'http://localhost:4000',
+    screenshot: 'only-on-failure',
     trace: 'on-first-retry', // Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer
   },
   // Start web server before running tests

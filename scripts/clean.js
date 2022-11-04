@@ -1,10 +1,11 @@
-import { exec } from 'child_process';
+import { rm } from 'fs';
 
-exec('rm -rf ./dist ./specs/report/ ./playwright/.cache/', (err, stdout) => {
-  if (err) {
-    console.error('clean command failed:', err);
-    return;
-  }
+const removeList = ['./dist/', './specs/artifacts/', './specs/report/', '.playwright/.cache/'];
 
-  if (stdout) console.log(stdout);
-});
+const removeItem = (item) => {
+  rm(item, { force: true, recursive: true }, (error) => {
+    if (error) console.error(error);
+  });
+};
+
+removeList.forEach((item) => removeItem(item));
