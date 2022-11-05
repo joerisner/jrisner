@@ -16,7 +16,7 @@ test.describe('Home Page', () => {
 
     await expect(employerLink).toHaveText('Aumni');
     await expect(employerLink).toHaveAttribute('href', 'https://aumni.fund');
-    await expect(githubLink).toHaveText('Joseph Risner');
+    await expect(githubLink).toBeVisible();
     await expect(githubLink).toHaveAttribute('href', 'https://github.com/joerisner');
     await expect(blogLink).toHaveText('Check out the latest blog articles');
     await expect(blogLink).toHaveAttribute('href', '/blog');
