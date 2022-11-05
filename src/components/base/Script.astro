@@ -1,0 +1,23 @@
+---
+---
+
+<script>
+  const expandNavPanel = () => {
+    const navPanel = document.querySelector('.primary-nav');
+    const navToggle = document.querySelector('.mobile-nav-toggle');
+
+    navToggle?.addEventListener('click', () => {
+      const isNavExpanded = navPanel?.getAttribute('data-visible');
+
+      if (isNavExpanded === 'false') {
+        navPanel?.setAttribute('data-visible', 'true');
+        navToggle?.setAttribute('aria-expanded', 'true');
+      } else {
+        navPanel?.setAttribute('data-visible', 'false');
+        navToggle?.setAttribute('aria-expanded', 'false');
+      }
+    });
+  };
+
+  expandNavPanel();
+</script>
