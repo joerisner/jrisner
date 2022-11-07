@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@astrojs/sitemap": "^1.0.0",
-    "@astrojs/tailwind": "2.1.1",
+    "@astrojs/tailwind": "2.1.2",
     "@playwright/test": "^1.27.1",
     "astro": "^1.6.1",
     "autoprefixer": "^10.4.13",
