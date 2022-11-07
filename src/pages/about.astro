@@ -1,12 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Heading from '../components/typography/Heading.astro';
+import LargeHeading from '../components/typography/LargeHeading.astro';
+import MediumHeading from '../components/typography/MediumHeading.astro';
+import SmallHeading from '../components/typography/SmallHeading.astro';
 import BadgeList from '../components/BadgeList.astro';
 import { SITE_TITLE } from '../config';
 ---
 
 <BaseLayout title={`About | ${SITE_TITLE}`}>
-  <Heading text="About Me" />
+  <LargeHeading text="About Me" />
   <section class="flex items-center mt-5">
     <div class="w-3/5">
       <p>
@@ -22,7 +24,7 @@ import { SITE_TITLE } from '../config';
       </p>
       <p>
         When I'm not programming, I enjoy spending time with my family in the mountains snowboarding, hiking, and
-        camping. And I may or may not have a thing for the 80's...
+        camping.
       </p>
     </div>
     <picture class="mx-auto">
@@ -31,21 +33,23 @@ import { SITE_TITLE } from '../config';
         class="rounded-full headshot"
         width="265"
         height="265"
-        src="/headshot_pink.jpg"
-        alt="Headshot"
-        onmouseover="this.src='/headshot.jpg'"
-        onmouseout="this.src='/headshot_pink.jpg'"
+        src="/headshot.jpg"
+        alt="Image of my dog and I on a hike"
+        onmouseover="this.src='/headshot_pink.jpg'"
+        onmouseout="this.src='/headshot.jpg'"
       />
     </picture>
   </section>
   <hr class="my-8 w-3/5 border-1 border-slate-700" />
   <section>
-    <h2 class="text-2xl text-accent-purple">Here are some technologies I've been working with lately</h2>
-    <h3 class="my-4 text-lg">Languages</h3>
-    <BadgeList badgeTexts={['JavaScript', 'TypeScript', 'Ruby']} />
-    <h3 class="my-4 text-lg">Frameworks</h3>
-    <BadgeList badgeTexts={['Ruby on Rails', 'Astro', 'Cypress', 'Bridgetown', 'Tailwind CSS', 'Playwright']} />
-    <h3 class="my-4 text-lg">Tools</h3>
-    <BadgeList badgeTexts={['Node JS', 'Docker']} />
+    <MediumHeading text="Here are some technologies I've been working with lately" />
+    <div class="flex flex-col gap-y-3 mt-4">
+      <SmallHeading text="Languages" />
+      <BadgeList badgeTexts={['JavaScript', 'TypeScript', 'Ruby']} />
+      <SmallHeading text="Frameworks" />
+      <BadgeList badgeTexts={['Ruby on Rails', 'Astro', 'Cypress', 'Bridgetown', 'Tailwind CSS', 'Playwright']} />
+      <SmallHeading text="Tools" />
+      <BadgeList badgeTexts={['Node JS', 'Docker']} />
+    </div>
   </section>
 </BaseLayout>
