@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 p {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  @apply my-4;
+  @apply text-muted;
+}
+
+::selection {
+  @apply bg-secondary text-black;
 }
 
 /* Responsive Navigation Bar */
