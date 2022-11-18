@@ -4,7 +4,7 @@ test.describe('Navigation - Large Viewport', () => {
   test('navigates to each page successfully', async ({ page }) => {
     await page.goto('/');
 
-    const expectedLinks = ['Blog', 'Projects', 'About'];
+    const expectedLinks = ['Home', 'Blog', 'Projects', 'About'];
     const allNavLinks = page.getByTestId('navLink');
 
     await expect(page.getByTestId('mobileNavToggle')).not.toBeVisible();
@@ -13,8 +13,13 @@ test.describe('Navigation - Large Viewport', () => {
     for (const link of expectedLinks) {
       await page.locator('[data-testid=navLink]', { hasText: link }).click();
 
-      await expect(page).toHaveTitle(`${link} | Joseph Risner`);
-      await expect(page).toHaveURL(`/${link.toLowerCase()}`);
+      if (link === 'Home') {
+        await expect(page).toHaveTitle('Joseph Risner');
+        await expect(page).toHaveURL('/');
+      } else {
+        await expect(page).toHaveTitle(`${link} | Joseph Risner`);
+        await expect(page).toHaveURL(`/${link.toLowerCase()}`);
+      }
     }
   });
 });
@@ -24,7 +29,7 @@ test.describe('Navigation - Mobile Viewport', () => {
     await page.setViewportSize({ width: 767, height: 940 });
     await page.goto('/');
 
-    const expectedLinks = ['Blog', 'Projects', 'About'];
+    const expectedLinks = ['Home', 'Blog', 'Projects', 'About'];
     const navToggle = page.getByTestId('mobileNavToggle');
 
     await expect(navToggle).toBeVisible();
@@ -34,7 +39,12 @@ test.describe('Navigation - Mobile Viewport', () => {
       const el = page.locator('[data-testid=navLink]', { hasText: link });
 
       await expect(el).toBeVisible();
-      await expect(el).toHaveAttribute('href', `/${link.toLowerCase()}`);
+
+      if (link === 'Home') {
+        await expect(el).toHaveAttribute('href', '/');
+      } else {
+        await expect(el).toHaveAttribute('href', `/${link.toLowerCase()}`);
+      }
     }
   });
 });
