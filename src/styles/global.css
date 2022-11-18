@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Anurati";
+  src: url("/fonts/Anurati.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
 p {
   @apply my-4;
   @apply text-muted;
@@ -35,7 +43,7 @@ p {
     width: 2.25rem;
     background-image: url("/icons/nav_open.svg");
     aspect-ratio: 1;
-    top: 2rem;
+    top: 1.8rem;
     right: 2rem;
   }
 
