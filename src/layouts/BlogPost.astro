@@ -1,0 +1,35 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { SITE_TITLE } from '../config';
+export interface Props {
+  content: {
+    publishDate: string;
+    title: string;
+    description: string;
+    heroImage: string;
+  };
+}
+const {
+  content: { publishDate, title, description, heroImage },
+} = Astro.props;
+---
+
+<!-- TODO: Needs to be finished -->
+<BaseLayout title={`${title} | ${SITE_TITLE}`} description={description} socialImage={heroImage}>
+  <section data-testid="postSummary">
+    <time>{publishDate}</time>
+    <h1>{title}</h1>
+    <picture>
+      <source />
+      <img src={heroImage} alt="Post Hero Image" />
+    </picture>
+  </section>
+  <article class="flex">
+    <section data-testid="postContent">
+      <slot />
+    </section>
+    <aside class="hidden lg:block mt-4" data-testid="tableOfContents">
+      <h3>TABLE OF CONTENTS</h3>
+    </aside>
+  </article>
+</BaseLayout>
