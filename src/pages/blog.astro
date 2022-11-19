@@ -1,6 +1,33 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import LargeHeading from '../components/typography/LargeHeading.astro';
+import BlogPostCard from '../components/blog/BlogPostCard.astro';
 import { SITE_TITLE } from '../config';
+
+const posts = (await Astro.glob('../pages/blog/*.md')).sort(
+  (a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf(),
+);
 ---
 
-<BaseLayout title={`Blog | ${SITE_TITLE}`} />
+<BaseLayout title={`Blog | ${SITE_TITLE}`}>
+  <LargeHeading text="Posts" />
+  <hr class="border-slate-700 mt-6 md:mt-10" />
+  <section>
+    <ul class="divide-y divide-slate-700">
+      {
+        posts.map(({ frontmatter, url }) => (
+          <li class="py-8 md:py-12">
+            <BlogPostCard
+              title={frontmatter.title}
+              description={frontmatter.description}
+              image={frontmatter.heroImage}
+              publishDate={frontmatter.publishDate}
+              tags={frontmatter.tags}
+              url={url}
+            />
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</BaseLayout>
