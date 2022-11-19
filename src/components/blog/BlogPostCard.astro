@@ -1,0 +1,30 @@
+---
+import BadgeList from '../BadgeList.astro';
+import MediumHeading from '../typography/MediumHeading.astro';
+export interface Props {
+  title: string;
+  description: string;
+  image: string;
+  publishDate: string;
+  tags: Array<string>;
+  url: string | undefined;
+}
+const { title, description, image, publishDate, tags, url } = Astro.props;
+---
+
+<article class="grid gap-6 lg:gap-8 lg:grid-cols-2">
+  <a href={url}>
+    <!-- TODO: Update this image to be responsive and consistently sized -->
+    <picture data-testid="postImage">
+      <img class="rounded-lg" alt={`Hero image for blog post with title ${title}`} src={image} />
+    </picture>
+  </a>
+  <div>
+    <a href={url}>
+      <MediumHeading text={title} />
+    </a>
+    <div class="mb-4 text-muted"><time datetime={publishDate} data-testid="postPublishdate">{publishDate}</time></div>
+    <p data-testid="postDescription">{description}</p>
+    <BadgeList badgeTexts={tags} />
+  </div>
+</article>
