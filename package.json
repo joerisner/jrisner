@@ -20,7 +20,7 @@
   "devDependencies": {
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "2.1.2",
-    "@playwright/test": "^1.27.1",
+    "@playwright/test": "^1.28.0",
     "astro": "^1.6.10",
     "autoprefixer": "^10.4.13",
     "eslint": "^8.27.0",
