@@ -16,7 +16,7 @@ module.exports = {
         tertiary: '#12b7bb',
       },
       fontFamily: {
-        primary: ['Roboto', ...fontFamily.sans],
+        primary: ['Inter', ...fontFamily.sans],
       },
     },
   },

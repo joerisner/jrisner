@@ -14,10 +14,15 @@ const { title, description, image, publishDate, tags, url } = Astro.props;
 
 <article class="grid gap-6 lg:gap-8 lg:grid-cols-2">
   <a href={url}>
-    <!-- TODO: Update this image to be responsive and consistently sized -->
-    <picture data-testid="postImage">
-      <img class="rounded-lg" alt={`Hero image for blog post with title ${title}`} src={image} />
-    </picture>
+    <img
+      alt={`Hero image for blog post with title ${title}`}
+      class="rounded-lg w-full"
+      decoding="async"
+      data-testid="postImage"
+      src={image}
+      width="730"
+      height="485"
+    />
   </a>
   <div>
     <a href={url}>
