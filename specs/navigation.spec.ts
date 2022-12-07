@@ -4,7 +4,7 @@ test.describe('Navigation - Large Viewport', () => {
   test('navigates to each page successfully', async ({ page }) => {
     await page.goto('/');
 
-    const expectedLinks = ['Home', 'Blog', 'Projects', 'About'];
+    const expectedLinks = ['Home', 'Blog', 'About'];
     const allNavLinks = page.getByTestId('navLink');
 
     await expect(page.getByTestId('mobileNavToggle')).not.toBeVisible();
@@ -29,7 +29,7 @@ test.describe('Navigation - Mobile Viewport', () => {
     await page.setViewportSize({ width: 767, height: 940 });
     await page.goto('/');
 
-    const expectedLinks = ['Home', 'Blog', 'Projects', 'About'];
+    const expectedLinks = ['Home', 'Blog', 'About'];
     const navToggle = page.getByTestId('mobileNavToggle');
 
     await expect(navToggle).toBeVisible();
