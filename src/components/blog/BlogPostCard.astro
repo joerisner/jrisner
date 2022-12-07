@@ -12,11 +12,11 @@ export interface Props {
 const { title, description, image, publishDate, tags, url } = Astro.props;
 ---
 
-<article class="grid gap-6 lg:gap-8 lg:grid-cols-2">
+<article class="grid gap-6 lg:grid-cols-2 lg:gap-8">
   <a href={url}>
     <img
       alt={`Hero image for blog post with title ${title}`}
-      class="rounded-lg w-full"
+      class="w-full rounded-lg"
       decoding="async"
       data-testid="postImage"
       src={image}
