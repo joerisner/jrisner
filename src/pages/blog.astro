@@ -11,7 +11,7 @@ const posts = (await Astro.glob('../pages/blog/*.md')).sort(
 
 <BaseLayout title={`Blog | ${SITE_TITLE}`}>
   <LargeHeading text="Posts" />
-  <hr class="border-slate-700 mt-6 md:mt-10" />
+  <hr class="mt-6 border-slate-700 md:mt-10" />
   <section>
     <ul class="divide-y divide-slate-700">
       {

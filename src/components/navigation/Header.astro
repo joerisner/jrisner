@@ -8,14 +8,14 @@ import NavLink from './NavLink.astro';
   <button
     aria-controls="primary-nav"
     aria-expanded="false"
-    class="hidden mobile-nav-toggle"
+    class="mobile-nav-toggle hidden"
     data-testid="mobileNavToggle"
   >
     <span class="sr-only">Menu</span>
   </button>
   <div class="flex gap-6">
     <nav data-testid="navBar">
-      <ul id="primary-nav" class="flex items-center gap-12 primary-nav" data-visible="false">
+      <ul id="primary-nav" class="primary-nav flex items-center gap-12" data-visible="false">
         <NavLink href="/" linkText="Home" />
         <NavLink href="/blog" linkText="Blog" />
         <NavLink href="/about" linkText="About" />
@@ -25,7 +25,7 @@ import NavLink from './NavLink.astro';
       <span class="text-slate-600">|</span>
       <a
         aria-label="Link to Github profile"
-        class="w-4 h-4 fill-slate-600 hover:fill-current"
+        class="h-4 w-4 fill-slate-600 hover:fill-current"
         href="https://github.com/joerisner"
         target="_blank"
         data-testid="githubLink"
