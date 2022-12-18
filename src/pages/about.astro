@@ -12,11 +12,12 @@ import { SITE_TITLE } from '../config';
   <hr class="my-6 border-slate-700 lg:mt-6 lg:mb-2 lg:w-3/5" />
   <section class="flex flex-col-reverse items-center lg:flex-row">
     <div class="lg:w-3/5">
+      <p>Hey, I'm Joseph. I'm a software engineer who loves helping teams build quality software.</p>
       <p>
-        Hey, I'm Joseph. I'm a software engineer who has a passion for building and helping teams create engaging
-        software. My interest in programming began in 2013 when I was asked to build a website for a former employer. As
-        I pored over material to learn HTML & CSS, I realized that being a self-taught developer was completely within
-        my grasp, and what I wanted to pursue as a career.
+        My interest in programming began in 2011 when I was asked to build a simple marketing website for a former
+        employer. I had no idea where to start, but I was thrilled to challenge myself and learn something completely
+        new. So, I picked up an "Intro to HTML & CSS" book from the bookstore, pored over the material, and built the
+        site. With that experience, I was hooked on building things with code!
       </p>
       <p>
         Fast-forward to today and I've had the privilege to work as a software engineer in test at two early-stage
@@ -24,18 +25,17 @@ import { SITE_TITLE } from '../config';
         scratch, writing clean, maintainable and reusable code.
       </p>
       <p>
-        When I'm not programming, I enjoy spending time with my family in the mountains snowboarding, hiking, and
-        camping.
+        Programming has become one of my chief hobbies, but I also enjoy going AFK and spending time with my family in
+        the mountains hiking, camping, and snowboarding.
       </p>
     </div>
     <img
+      id="headshot"
       class="mx-auto my-auto rounded-full"
       width="265"
       height="265"
       src="/images/headshot.jpg"
       alt="Image of my dog and I on a hike"
-      onmouseover="this.src='/images/headshot2.jpg'"
-      onmouseout="this.src='/images/headshot.jpg'"
     />
   </section>
   <hr class="mt-2 mb-6 border-slate-700 lg:w-3/5" />
@@ -51,3 +51,23 @@ import { SITE_TITLE } from '../config';
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  const img = document.getElementById('headshot') as HTMLImageElement | null;
+  const defaultImg = '/images/headshot.jpg';
+  const accentImg = '/images/headshot2.jpg';
+
+  if (img) {
+    ['pointerover', 'pointerdown'].forEach((e) => {
+      img.addEventListener(e, () => {
+        img.src = accentImg;
+      });
+    });
+
+    ['pointerout', 'pointerup'].forEach((e) => {
+      img.addEventListener(e, () => {
+        img.src = defaultImg;
+      });
+    });
+  }
+</script>
