@@ -1,0 +1,16 @@
+---
+interface Props {
+  href: string;
+  text: string;
+}
+
+const { href, text, ...rest } = Astro.props;
+---
+
+<a
+  role="button"
+  href={href}
+  class="mx-auto rounded px-2 py-1 text-base text-primary outline outline-1 hover:bg-violet-900 hover:text-default hover:outline-none"
+  {...rest}
+  >{text}
+</a>
