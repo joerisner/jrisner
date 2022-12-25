@@ -1,0 +1,17 @@
+---
+import Head from '../components/base/Head.astro';
+import LinkButton from '../components/LinkButton.astro';
+import { SITE_TITLE } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <Head title={`404: Not Found | ${SITE_TITLE}`} />
+  <body class="min-h-screen bg-black bg-gradient-to-b from-black to-slate-900 bg-cover">
+    <section class="mx-auto mt-28 max-w-md px-4 text-center">
+      <h1 class="inline bg-gradient-to-r from-primary to-secondary bg-clip-text text-9xl text-transparent">404</h1>
+      <p class="mb-8 text-4xl text-default">Sorry, the page you are looking for does not exist.</p>
+      <LinkButton href="/" text="Back to homepage" data-testid="homePageLink" />
+    </section>
+  </body>
+</html>
