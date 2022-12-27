@@ -18,6 +18,9 @@ module.exports = {
       fontFamily: {
         primary: ['Inter', ...fontFamily.sans],
       },
+      maxWidth: {
+        blog: '850px',
+      },
     },
   },
 };
