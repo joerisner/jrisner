@@ -10,5 +10,11 @@ export default defineConfig({
       config: { applyBaseStyles: false }, // Importing these already in src/styles/global.css
     }),
   ],
+  markdown: {
+    shikiConfig: {
+      theme: 'material-ocean',
+      wrap: false, // TODO: Add horizontal scroll in pre blocks
+    },
+  },
   server: { port: 4000 },
 });
