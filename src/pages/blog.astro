@@ -4,12 +4,13 @@ import LargeHeading from '../components/typography/LargeHeading.astro';
 import BlogPostCard from '../components/blog/BlogPostCard.astro';
 import { SITE_TITLE } from '../config';
 
+const title = `Blog | ${SITE_TITLE}`;
 const posts = (await Astro.glob('../pages/blog/*.md')).sort(
   (a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf(),
 );
 ---
 
-<BaseLayout title={`Blog | ${SITE_TITLE}`}>
+<BaseLayout title={title}>
   <LargeHeading text="Posts" />
   <hr class="mt-6 border-slate-700 md:mt-10" />
   <section>
