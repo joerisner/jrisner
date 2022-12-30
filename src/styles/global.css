@@ -44,7 +44,7 @@ p {
     background-image: url("/icons/nav_open.svg");
     aspect-ratio: 1;
     top: 1.8rem;
-    right: 2rem;
+    right: 0.5rem;
   }
 
   .mobile-nav-toggle[aria-expanded="true"] {
