@@ -5,9 +5,11 @@ import MediumHeading from '../components/typography/MediumHeading.astro';
 import SmallHeading from '../components/typography/SmallHeading.astro';
 import BadgeList from '../components/BadgeList.astro';
 import { SITE_TITLE } from '../config';
+
+const title = `About | ${SITE_TITLE}`;
 ---
 
-<BaseLayout title={`About | ${SITE_TITLE}`}>
+<BaseLayout title={title}>
   <LargeHeading text="About Me" />
   <hr class="my-6 border-slate-700 lg:mt-6 lg:mb-2 lg:w-3/5" />
   <section class="flex flex-col-reverse items-center lg:flex-row">
