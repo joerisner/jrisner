@@ -3,7 +3,6 @@ import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  site: 'https://jrisner.dev',
   integrations: [
     sitemap(),
     tailwind({
@@ -17,4 +16,14 @@ export default defineConfig({
     },
   },
   server: { port: 4000 },
+  site: 'https://jrisner.dev',
+  vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          assetFileNames: 'assets/[hash][extname]',
+        },
+      },
+    },
+  },
 });
