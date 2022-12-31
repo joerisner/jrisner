@@ -6,7 +6,6 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "astro build",
-    "check": "astro check",
     "clean": "node ./scripts/clean.js",
     "dev": "astro dev",
     "format": "prettier . --list-different",
@@ -15,7 +14,8 @@
     "lint:md": "markdownlint \"**/*.md\" --ignore node_modules",
     "preview": "yarn build && astro preview",
     "test": "playwright test",
-    "test:report": "playwright show-report ./specs/report"
+    "test:report": "playwright show-report ./specs/report",
+    "typecheck": "astro check && tsc --noEmit"
   },
   "devDependencies": {
     "@astrojs/sitemap": "^1.0.0",
