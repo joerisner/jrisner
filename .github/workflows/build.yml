@@ -18,7 +18,7 @@ jobs:
       - name: setup node
         uses: actions/setup-node@v3
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
           cache: yarn
       - run: yarn audit
 
@@ -30,8 +30,8 @@ jobs:
       - name: setup node
         uses: actions/setup-node@v3
         with:
-          node-version-file: '.nvmrc'
-          cache: 'yarn'
+          node-version-file: .nvmrc
+          cache: yarn
       - run: yarn install --immutable
 
       - name: astro-check
