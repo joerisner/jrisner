@@ -5,7 +5,7 @@ const { fontFamily } = require('tailwindcss/defaultTheme');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{astro,html,js,md}'],
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
   theme: {
     extend: {
       colors: {
@@ -17,6 +17,9 @@ module.exports = {
       },
       fontFamily: {
         primary: ['Inter', ...fontFamily.sans],
+      },
+      maxWidth: {
+        blog: '850px',
       },
     },
   },
