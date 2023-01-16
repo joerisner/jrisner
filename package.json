@@ -23,7 +23,7 @@
     "@playwright/test": "^1.29.2",
     "astro": "^1.9.1",
     "autoprefixer": "^10.4.13",
-    "eslint": "^8.31.0",
+    "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "markdownlint-cli": "^0.32.2",
