@@ -17,6 +17,10 @@ module.exports = {
       },
       fontFamily: {
         primary: ['Inter', ...fontFamily.sans],
+        code: ['Fira Code', ...fontFamily.mono],
+      },
+      maxWidth: {
+        blog: '850px',
       },
     },
   },

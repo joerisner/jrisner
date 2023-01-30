@@ -12,7 +12,7 @@ export default defineConfig({
   markdown: {
     shikiConfig: {
       theme: 'material-ocean',
-      wrap: false, // TODO: Add horizontal scroll in pre blocks
+      wrap: false,
     },
   },
   server: { port: 4000 },

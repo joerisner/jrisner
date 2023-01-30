@@ -52,3 +52,33 @@
     background-image: url("/icons/nav_closed.svg");
   }
 }
+
+/* Blog Post Content */
+#post-content h2 {
+  @apply mt-14 mb-6 text-xl font-bold text-secondary md:text-2xl;
+}
+
+#post-content h3 {
+  @apply mt-10 mb-6 text-lg font-bold md:text-xl;
+}
+
+#post-content blockquote {
+  @apply my-8 border-l-4 border-slate-700 pl-4;
+}
+
+#post-content blockquote p {
+  @apply italic text-default;
+}
+
+#post-content code {
+  @apply font-code;
+}
+
+#post-content code:not(pre code) {
+  @apply rounded-md bg-slate-900 px-1 py-1 text-sm font-semibold text-primary md:text-base;
+}
+
+#post-content pre {
+  width: calc(100vw - 2.5rem);
+  @apply my-8 max-w-blog rounded-lg p-4 text-sm md:text-base;
+}
