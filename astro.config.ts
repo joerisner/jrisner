@@ -5,9 +5,7 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [
     sitemap(),
-    tailwind({
-      config: { applyBaseStyles: false }, // Importing these already in src/styles/global.css
-    }),
+    tailwind({ applyBaseStyles: false }), // Importing these already in src/styles/global.css
   ],
   markdown: {
     shikiConfig: {
