@@ -55,11 +55,11 @@
 
 /* Blog Post Content */
 #post-content h2 {
-  @apply mt-14 mb-6 text-xl font-bold text-secondary md:text-2xl;
+  @apply mb-6 mt-14 text-xl font-bold text-secondary md:text-2xl;
 }
 
 #post-content h3 {
-  @apply mt-10 mb-6 text-lg font-bold md:text-xl;
+  @apply mb-6 mt-10 text-lg font-bold md:text-xl;
 }
 
 #post-content blockquote {

@@ -29,7 +29,7 @@ const config: PlaywrightTestConfig = {
   // Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions
   use: {
     actionTimeout: 0, // 0 = no limit
-    baseURL: 'http://127.0.0.1:4000', // NOTE: Can be changed back to localhost after v1.30 https://github.com/microsoft/playwright/issues/18790
+    baseURL: 'http://localhost:4000',
     screenshot: {
       mode: 'only-on-failure',
       fullPage: true,
@@ -41,7 +41,7 @@ const config: PlaywrightTestConfig = {
     command: 'yarn preview',
     reuseExistingServer: !process.env.CI,
     timeout: 30 * 1000,
-    url: 'http://127.0.0.1:4000', // Waits for 2xx, 3xx, or 4xx response before running tests. See note on `baseURL` above, as well
+    url: 'http://localhost:4000', // Waits for 2xx, 3xx, or 4xx response before running tests
   },
   workers: process.env.CI ? 1 : undefined, // Opt out of parallel tests on CI
 };

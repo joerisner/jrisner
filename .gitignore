@@ -1,4 +1,5 @@
 # Build Output
+.astro/
 dist/
 
 # Dependencies
