@@ -4,7 +4,7 @@ test.describe('Navigation - Large Viewport', () => {
   test('navigates to each page successfully', async ({ page }) => {
     await page.goto('/');
 
-    const expectedLinks = ['Home', 'Blog', 'About'];
+    const expectedLinks = ['Home', 'Cheat Sheets', 'Blog', 'About'];
     const allNavLinks = page.getByTestId('navLink');
 
     await expect(page.getByTestId('mobileNavToggle')).not.toBeVisible();
@@ -18,7 +18,7 @@ test.describe('Navigation - Large Viewport', () => {
         await expect(page).toHaveURL('/');
       } else {
         await expect(page).toHaveTitle(`${link} | Joseph Risner`);
-        await expect(page).toHaveURL(`/${link.toLowerCase()}`);
+        await expect(page).toHaveURL(`/${link.toLowerCase().replace(' ', '-')}`);
       }
     }
   });
@@ -29,7 +29,7 @@ test.describe('Navigation - Mobile Viewport', () => {
     await page.setViewportSize({ width: 767, height: 940 });
     await page.goto('/');
 
-    const expectedLinks = ['Home', 'Blog', 'About'];
+    const expectedLinks = ['Home', 'Cheat Sheets', 'Blog', 'About'];
     const navToggle = page.getByTestId('mobileNavToggle');
 
     await expect(navToggle).toBeVisible();
@@ -43,7 +43,7 @@ test.describe('Navigation - Mobile Viewport', () => {
       if (link === 'Home') {
         await expect(el).toHaveAttribute('href', '/');
       } else {
-        await expect(el).toHaveAttribute('href', `/${link.toLowerCase()}`);
+        await expect(el).toHaveAttribute('href', `/${link.toLowerCase().replace(' ', '-')}`);
       }
     }
   });

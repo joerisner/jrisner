@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import LargeHeading from '../components/typography/LargeHeading.astro';
 import BlogPostCard from '../components/blog/BlogPostCard.astro';
 import { SITE_TITLE } from '../config';
+import HorizontalLine from '../components/HorizontalLine.astro';
 
 const title = `Blog | ${SITE_TITLE}`;
 const posts = (await Astro.glob('../pages/blog/*.md')).sort(
@@ -12,7 +13,7 @@ const posts = (await Astro.glob('../pages/blog/*.md')).sort(
 
 <BaseLayout title={title}>
   <LargeHeading text="Posts" />
-  <hr class="mt-6 border-slate-700 md:mt-10" />
+  <HorizontalLine />
   <section>
     <ul class="divide-y divide-slate-700">
       {

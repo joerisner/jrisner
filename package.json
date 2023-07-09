@@ -15,6 +15,7 @@
     "preview": "yarn build && astro preview",
     "test": "playwright test",
     "test:report": "playwright show-report ./specs/report",
+    "test:ui": "playwright test --ui",
     "typecheck": "astro check && tsc --noEmit"
   },
   "devDependencies": {
