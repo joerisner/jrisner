@@ -18,12 +18,8 @@ const mainClass = marginTop ? 'mx-auto mt-4 flex flex-col md:mt-8' : 'mx-auto fl
 <!DOCTYPE html>
 <html lang="en" class="motion-safe:scroll-smooth">
   <head><Head title={title} description={description} socialImage={socialImage} /></head>
-  <body
-    class="overflow-x-hidden bg-black bg-gradient-to-b from-black to-slate-900 bg-cover font-primary text-default md:text-lg"
-  >
-    <div
-      class="mx-auto flex min-h-screen max-w-3xl flex-col justify-between gap-y-4 px-5 lg:max-w-4xl xl:max-w-5xl xl:px-0 2xl:max-w-6xl"
-    >
+  <body class="overflow-x-hidden bg-black bg-gradient-to-b from-black to-slate-900 bg-cover font-primary text-default md:text-lg">
+    <div class="mx-auto flex min-h-screen max-w-3xl flex-col justify-between gap-y-4 px-5 lg:max-w-4xl xl:max-w-5xl xl:px-0 2xl:max-w-6xl">
       <Header />
       <main class={mainClass}>
         <slot />
