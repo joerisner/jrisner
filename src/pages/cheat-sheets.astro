@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HorizontalLine from '../components/HorizontalLine.astro';
+import LargeHeading from '../components/typography/LargeHeading.astro';
+import { SITE_TITLE } from '../config';
+const title = `Cheat Sheets | ${SITE_TITLE}`;
+---
+
+<BaseLayout title={title}>
+  <LargeHeading text="Cheat Sheets" />
+  <HorizontalLine />
+  <section></section>
+</BaseLayout>

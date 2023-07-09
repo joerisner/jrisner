@@ -5,14 +5,15 @@ import MediumHeading from '../components/typography/MediumHeading.astro';
 import SmallHeading from '../components/typography/SmallHeading.astro';
 import BadgeList from '../components/BadgeList.astro';
 import { SITE_TITLE } from '../config';
+import HorizontalLine from '../components/HorizontalLine.astro';
 
 const title = `About | ${SITE_TITLE}`;
 ---
 
 <BaseLayout title={title}>
   <LargeHeading text="About Me" />
-  <hr class="my-6 border-slate-700 lg:mb-2 lg:mt-6 lg:w-3/5" />
-  <section class="flex flex-col-reverse items-center lg:flex-row">
+  <HorizontalLine classes={['lg:w-3/5']} />
+  <section class="mt-4 flex flex-col-reverse items-center lg:mt-0 lg:flex-row">
     <div class="lg:w-3/5">
       <p>Hey, I'm Joseph. I'm a software engineer who loves helping teams build quality software.</p>
       <p>
