@@ -129,4 +129,8 @@ const arr = ['Nick', 'Jess', 'Schmidt', 'Winston'];
 for (const el of arr) {
   console.log(el);
 }
+// Nick
+// Jess
+// Schmidt
+// Winston
 ```
