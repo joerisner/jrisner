@@ -1,0 +1,25 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import LargeHeading from '../components/typography/LargeHeading.astro';
+import { SITE_TITLE } from '../config';
+import MediumHeading from '../components/typography/MediumHeading.astro';
+
+export interface Props {
+  content: {
+    feature: string;
+  };
+}
+
+const {
+  content: { feature },
+} = Astro.props;
+---
+
+<BaseLayout title={`${feature} | ${SITE_TITLE}`}>
+  <section class="mx-auto max-w-blog">
+    <LargeHeading text={`${feature} Cheat Sheet`} />
+  </section>
+  <article id="markdown-content" class="mx-auto max-w-blog">
+    <slot />
+  </article>
+</BaseLayout>

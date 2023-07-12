@@ -1,0 +1,19 @@
+---
+import SmallHeading from './typography/SmallHeading.astro';
+
+export interface Props {
+  title: string;
+  body: string;
+  target: string;
+  icon?: string;
+}
+
+const { title, body, target } = Astro.props;
+---
+
+<a href={target}>
+  <div class="rounded-md border border-primary p-4 transition hover:border-transparent hover:bg-violet-900">
+    <small class="text-muted">{title}</small>
+    <h3 class="text-xl font-bold">{body}</h3>
+  </div>
+</a>
