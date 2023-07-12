@@ -11,7 +11,7 @@
     "format": "prettier . --list-different",
     "format:ci": "prettier . --check --cache",
     "lint:js": "eslint \"./**/*.{js,cjs,mjs}\"",
-    "lint:md": "markdownlint \"**/*.md\" --ignore node_modules",
+    "lint:md": "markdownlint \"**/*.md\" --ignore node_modules --disable MD041 MD013",
     "preview": "yarn build && astro preview",
     "test": "playwright test",
     "test:report": "playwright show-report ./specs/report",
