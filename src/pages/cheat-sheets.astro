@@ -6,14 +6,13 @@ import { SITE_TITLE } from '../config';
 import Panel from '../components/Panel.astro';
 
 const title = `Cheat Sheets | ${SITE_TITLE}`;
+const cheatSheets = await Astro.glob('../pages/cheat-sheets/*.md');
 ---
 
 <BaseLayout title={title}>
   <LargeHeading text="Cheat Sheets" />
   <HorizontalLine />
   <section class="my-4 grid gap-4 sm:grid-cols-2 md:my-6 lg:grid-cols-3 lg:gap-6">
-    <Panel title="Cheat sheet" body="JavaScript - Arrays" target="/cheat-sheets/javascript-arrays" />
-    <Panel title="Cheat sheet" body="Git" target="/cheat-sheets/git" />
-    <Panel title="Cheat sheet" body="Docker" target="/cheat-sheets/docker" />
+    {cheatSheets.map((cheatSheet) => <Panel title="Cheat sheet" body={cheatSheet.frontmatter?.feature} target={String(cheatSheet.url)} />)}
   </section>
 </BaseLayout>

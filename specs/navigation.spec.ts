@@ -2,11 +2,11 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Navigation - Large Viewport', () => {
   test('navigates to each page successfully', async ({ page }) => {
-    await page.goto('/');
-
     const expectedLinks = ['Home', 'Cheat Sheets', 'Blog', 'About'];
     const allNavLinks = page.getByTestId('navLink');
 
+    await page.goto('/');
+    await expect(page).toHaveTitle('Joseph Risner');
     await expect(page.getByTestId('mobileNavToggle')).not.toBeVisible();
     await expect(allNavLinks).toHaveText(expectedLinks, { ignoreCase: false });
 
@@ -26,12 +26,11 @@ test.describe('Navigation - Large Viewport', () => {
 
 test.describe('Navigation - Mobile Viewport', () => {
   test('displays navigation overlay with nav links', async ({ page }) => {
-    await page.setViewportSize({ width: 767, height: 940 });
-    await page.goto('/');
-
     const expectedLinks = ['Home', 'Cheat Sheets', 'Blog', 'About'];
     const navToggle = page.getByTestId('mobileNavToggle');
 
+    await page.setViewportSize({ width: 767, height: 940 });
+    await page.goto('/');
     await expect(navToggle).toBeVisible();
     await navToggle.click();
 

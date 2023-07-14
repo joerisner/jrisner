@@ -118,6 +118,13 @@ arr.forEach((el) => console.log(el));
 // Jess
 // Schmidt
 // Winston
+
+// With index argument in the callback:
+arr.forEach((el, index) => console.log(`${el} at index ${index}`));
+// Nick at index 0
+// Jess at index 1
+// Schmidt at index 2
+// Winston at index 3
 ```
 
 ### `for...of`
@@ -133,4 +140,13 @@ for (const el of arr) {
 // Jess
 // Schmidt
 // Winston
+
+// With destructuring:
+for (const [index, el] of arr.entries()) {
+  console.log(`${el} at index ${index}`);
+}
+// Nick at index 0
+// Jess at index 1
+// Schmidt at index 2
+// Winston at index 3
 ```
