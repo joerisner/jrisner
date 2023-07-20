@@ -22,7 +22,7 @@ git reset --hard origin/master
 
 _Creates a new commit at HEAD that reverts all changes from the commit passed to `revert`. With the `--no-edit` option, we can skip opening the commit message editor and, instead, use the original commit message prepended with the word "Revert"._
 
-```shell
+```bash
 git revert --no-edit [<commit>]
 ```
 
@@ -30,7 +30,7 @@ git revert --no-edit [<commit>]
 
 _Amends the most recent commit. Most commonly, this is used to change the commit message, but it can also be used to add additional (staged) changes to the most recent commit. Changes the commit SHA._
 
-```shell
+```bash
 # Amend commit message for most recent commit
 git commit --amend -m "<new_message>"
 
@@ -44,16 +44,16 @@ git commit --amend --no-edit
 
 _Removes upstream tracking of a branch. If no branch is specified it defaults to the current branch._
 
-```shell
+```bash
 git branch --unset-upstream [<branch>]
 ```
 
 ## [Logs](#logs)
 
-`--oneline --graph`
+`--pretty=short --graph`
 
-_Consolidates logs for each commit into a single line and displays a text-based graphical representation of the git history in the output._
+_Minimizes the commit details and displays a text-based graphical representation of the git history in the output._
 
-```shell
-git log --oneline --graph
+```bash
+git log --pretty=short --graph
 ```
