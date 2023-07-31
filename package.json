@@ -19,7 +19,7 @@
     "typecheck": "astro check && tsc --noEmit"
   },
   "devDependencies": {
-    "@astrojs/sitemap": "^1.4.0",
+    "@astrojs/sitemap": "^2.0.1",
     "@astrojs/tailwind": "^4.0.0",
     "@playwright/test": "^1.36.2",
     "astro": "^2.8.3",
