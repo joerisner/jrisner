@@ -1,9 +1,9 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import LargeHeading from '../components/typography/LargeHeading.astro';
-import BlogPostCard from '../components/blog/BlogPostCard.astro';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import LargeHeading from '@components/typography/LargeHeading.astro';
+import BlogPostCard from '@components/blog/BlogPostCard.astro';
+import HorizontalLine from '@components/HorizontalLine.astro';
 import { SITE_TITLE } from '../config';
-import HorizontalLine from '../components/HorizontalLine.astro';
 
 const title = `Blog | ${SITE_TITLE}`;
 const posts = (await Astro.glob('../pages/blog/*.md')).sort(

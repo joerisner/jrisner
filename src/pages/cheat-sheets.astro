@@ -1,9 +1,9 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import HorizontalLine from '../components/HorizontalLine.astro';
-import LargeHeading from '../components/typography/LargeHeading.astro';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import HorizontalLine from '@components/HorizontalLine.astro';
+import LargeHeading from '@components/typography/LargeHeading.astro';
+import Panel from '@components/Panel.astro';
 import { SITE_TITLE } from '../config';
-import Panel from '../components/Panel.astro';
 
 const title = `Cheat Sheets | ${SITE_TITLE}`;
 const cheatSheets = await Astro.glob('../pages/cheat-sheets/*.md');
