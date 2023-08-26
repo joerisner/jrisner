@@ -6,7 +6,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "astro build",
-    "clean": "node ./lib/clean.js",
+    "clean": "node ./bin/clean.js",
     "dev": "astro dev",
     "format": "prettier . --list-different",
     "format:ci": "prettier . --check --cache",
@@ -22,7 +22,7 @@
     "@astrojs/sitemap": "^2.0.2",
     "@astrojs/tailwind": "^4.0.0",
     "@playwright/test": "^1.37.1",
-    "astro": "^2.10.7",
+    "astro": "^2.10.14",
     "autoprefixer": "^10.4.15",
     "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
