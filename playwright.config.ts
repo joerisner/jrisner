@@ -38,7 +38,7 @@ const config: PlaywrightTestConfig = {
   },
   // Start web server before running tests
   webServer: {
-    command: 'yarn preview',
+    command: 'npm run preview',
     reuseExistingServer: !process.env.CI,
     timeout: 30 * 1000,
     url: 'http://localhost:4000', // Waits for 2xx, 3xx, or 4xx response before running tests

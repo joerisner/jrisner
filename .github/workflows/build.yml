@@ -7,7 +7,7 @@ permissions:
   contents: read
 
 jobs:
-  yarn-audit:
+  npm-audit:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -16,8 +16,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
-          cache: yarn
-      - run: yarn audit
+          cache: npm
+      - name: npm audit
+        run: npm audit
 
   lint:
     runs-on: ubuntu-latest
@@ -28,17 +29,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
-          cache: yarn
-      - run: yarn install --immutable
+          cache: npm
+      - run: npm ci
 
       - name: typecheck
-        run: yarn typecheck
+        run: npm run typecheck
 
       - name: eslint
-        run: yarn lint:js
+        run: npm run lint:js
 
       - name: markdownlint
-        run: yarn lint:md
+        run: npm run lint:md
 
       - name: prettier
-        run: yarn format:ci
+        run: npm run format
