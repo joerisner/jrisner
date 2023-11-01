@@ -4,7 +4,7 @@ pull_request_rules:
       - author~=^dependabot(|-preview)\[bot\]$
       - base=master
       - check-success=lint
-      - check-success=yarn-audit
+      - check-success=npm-audit
       - check-success=playwright
       - title~=^Bump [^\s]+ from ([\d]+)\..+ to \1\.
     actions:

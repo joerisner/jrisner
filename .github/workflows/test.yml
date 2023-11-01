@@ -17,14 +17,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
-          cache: yarn
-      - run: yarn install --immutable
+          cache: npm
+      - run: npm ci
 
       - name: install browsers
-        run: yarn playwright install --with-deps
+        run: npx playwright install --with-deps
 
       - name: run tests
-        run: yarn test
+        run: npm test
 
       - uses: actions/upload-artifact@v3
         if: always()

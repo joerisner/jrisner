@@ -7,11 +7,10 @@
   "scripts": {
     "build": "astro build",
     "clean": "node ./bin/clean.js",
-    "format": "prettier . --list-different",
-    "format:ci": "prettier . --check --cache",
+    "format": "prettier . --check",
     "lint:js": "eslint \"./**/*.{js,cjs}\"",
     "lint:md": "markdownlint \"**/*.md\" --ignore node_modules --disable MD041 MD013",
-    "preview": "yarn build && astro preview",
+    "preview": "npm run build && astro preview",
     "start": "astro dev",
     "test": "playwright test",
     "test:report": "playwright show-report ./specs/report",
