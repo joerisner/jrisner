@@ -2,7 +2,13 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Cheat Sheets Page', () => {
   test('displays cheat sheets with expected links', async ({ page }) => {
-    const expectedCheatSheets = ['Git', 'Java Access Modifiers', 'Java Annotations', 'JavaScript Arrays'];
+    const expectedCheatSheets = [
+      'Git',
+      'Java Access Modifiers',
+      'Java Annotations',
+      'JavaScript Arrays',
+      'JPA Annotations',
+    ];
     const allPanelTitles = await page.getByTestId('panel-title').all();
 
     await page.goto('/cheat-sheets');
