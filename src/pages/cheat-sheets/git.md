@@ -5,20 +5,23 @@ feature: 'Git'
 
 ## [Commits](#commits)
 
-`reset`
+### [`reset`](#reset)
 
-_Resets the current branch HEAD to a given state, unstages any changes, and deletes any changes from the working directory. Use with caution._
+_Resets the current branch HEAD to a given state. Use with caution._
 
 ```bash
-# Reset to a specific commit
+# Reset to a specific commit, unstage changes, and delete changes from the working directory
 git reset --hard [<commit>]
+
+# Reset to a specific commit, but keep unstaged & working directory changes
+git reset --soft [<commit>]
 
 # Reset HEAD to origin (master branch in this example)
 git fetch origin
 git reset --hard origin/master
 ```
 
-`revert`
+### [`revert`](#revert)
 
 _Creates a new commit at HEAD that reverts all changes from the commit passed to `revert`. With the `--no-edit` option, we can skip opening the commit message editor and, instead, use the original commit message prepended with the word "Revert"._
 
@@ -26,7 +29,7 @@ _Creates a new commit at HEAD that reverts all changes from the commit passed to
 git revert --no-edit [<commit>]
 ```
 
-`--amend`
+### [`--amend`](#--amend)
 
 _Amends the most recent commit. Most commonly, this is used to change the commit message, but it can also be used to add additional (staged) changes to the most recent commit. Changes the commit SHA._
 
@@ -40,7 +43,7 @@ git commit --amend --no-edit
 
 ## [Branches](#branches)
 
-`--unset-upstream`
+### [`--unset-upstream`](#--unset-upstream)
 
 _Removes upstream tracking of a branch. If no branch is specified it defaults to the current branch._
 
@@ -50,7 +53,7 @@ git branch --unset-upstream [<branch>]
 
 ## [Logs](#logs)
 
-`--pretty=short --graph`
+### `--pretty=short --graph`
 
 _Minimizes the commit details and displays a text-based graphical representation of the git history in the output._
 
