@@ -77,27 +77,27 @@ public class Student {
 
 ### [`@GeneratedValue`](#generatedvalue)
 
-_Specifies the generation strategies for the values of primary keys. Should be used in conjunction with the `@Id` annotation._
+_Specifies the generation strategies for the values of primary keys. Should be used in conjunction with the `@Id` annotation and usually paired with `@SequenceGenerator`._
 
 ```java
 @Entity
 public class Student {
   @Id
-  @GeneratedValue(strategy = SEQUENCE, generator = "CUSTOM_SEQUENCE")
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CUSTOM_SEQUENCE")
   private Long id;
 }
 ```
 
 ### [`@SequenceGenerator`](#sequencegenerator)
 
-_Defines a primary key generator that may be referenced by name when a generator element is specified for the `@GeneratedValue` annotation. May be specified on the entity class instead of a property._
+_Defines a primary key generator that may be referenced by `name` when a generator element is specified for the `@GeneratedValue` annotation. May be specified on the entity class instead of a property._
 
 ```java
 @Entity
 public class Student {
   @Id
-  @SequenceGenerator(name = "STUDENT_SEQUENCE", allocationSize = 10)
-  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "STUDENT_SEQUENCE")
+  @SequenceGenerator(name = "stud_seq", sequenceName = "student_sequence", initialValue = 1, allocationSize = 10)
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "stud_seq")
   private Long id;
 }
 ```
