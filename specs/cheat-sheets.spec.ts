@@ -3,6 +3,7 @@ import { test, expect } from '@playwright/test';
 test.describe('Cheat Sheets Page', () => {
   test('displays cheat sheets with expected links', async ({ page }) => {
     const expectedCheatSheets = [
+      'Docker',
       'Git',
       'Java Access Modifiers',
       'Java Annotations',
