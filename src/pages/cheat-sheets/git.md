@@ -9,7 +9,7 @@ feature: 'Git'
 
 _Resets the current branch HEAD to a given state. Use with caution._
 
-```bash
+```sh
 # Reset to a specific commit, unstage changes, and delete changes from the working directory
 git reset --hard [<commit>]
 
@@ -25,7 +25,7 @@ git reset --hard origin/master
 
 _Creates a new commit at HEAD that reverts all changes from the commit passed to `revert`. With the `--no-edit` option, we can skip opening the commit message editor and, instead, use the original commit message prepended with the word "Revert"._
 
-```bash
+```sh
 git revert --no-edit [<commit>]
 ```
 
@@ -33,7 +33,7 @@ git revert --no-edit [<commit>]
 
 _Amends the most recent commit. Most commonly, this is used to change the commit message, but it can also be used to add additional (staged) changes to the most recent commit. Changes the commit SHA._
 
-```bash
+```sh
 # Amend commit message for most recent commit
 git commit --amend -m "<new_message>"
 
@@ -47,7 +47,7 @@ git commit --amend --no-edit
 
 _Removes upstream tracking of a branch. If no branch is specified it defaults to the current branch._
 
-```bash
+```sh
 git branch --unset-upstream [<branch>]
 ```
 
@@ -57,6 +57,20 @@ git branch --unset-upstream [<branch>]
 
 _Minimizes the commit details and displays a text-based graphical representation of the git history in the output._
 
-```bash
+```sh
 git log --pretty=short --graph
+```
+
+### `rev-parse`
+
+_Fetch the current HEAD commit SHA._
+
+```sh
+git rev-parse HEAD
+```
+
+_Fetch the current HEAD branch name._
+
+```sh
+git rev-parse --abbrev-ref HEAD
 ```
