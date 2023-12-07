@@ -85,5 +85,5 @@
 
 #markdown-content pre {
   width: calc(100vw - 2.5rem);
-  @apply my-8 max-w-blog rounded-lg border border-slate-800 p-4 text-sm md:text-base;
+  @apply my-8 max-w-article rounded-lg border border-slate-800 p-4 text-sm md:text-base;
 }

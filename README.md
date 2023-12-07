@@ -1,6 +1,6 @@
 # [jrisner.dev](https://jrisner.dev)
 
-My personal dev site. I primarily use this site for having a web-accessible place to jot down everything I can't seem to remember. Cheat sheets to the rescue.
+My personal dev site. I primarily use this site for cheat sheets: a web-accessible repository of things I can't seem to remember.
 
 ## Built using
 

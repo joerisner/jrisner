@@ -20,7 +20,7 @@ module.exports = {
         code: ['Fira Code', ...fontFamily.mono],
       },
       maxWidth: {
-        blog: '850px',
+        article: '850px',
       },
     },
   },
