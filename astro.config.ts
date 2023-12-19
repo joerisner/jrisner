@@ -9,7 +9,7 @@ export default defineConfig({
   ],
   markdown: {
     shikiConfig: {
-      theme: 'material-ocean',
+      theme: 'material-theme-palenight',
       wrap: false,
     },
   },
