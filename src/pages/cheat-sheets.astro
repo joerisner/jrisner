@@ -1,7 +1,5 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-import HorizontalLine from '@components/HorizontalLine.astro';
-import LargeHeading from '@components/typography/LargeHeading.astro';
 import Panel from '@components/Panel.astro';
 import { SITE_TITLE } from '../config';
 
@@ -10,8 +8,8 @@ const cheatSheets = await Astro.glob('../pages/cheat-sheets/*.md');
 ---
 
 <BaseLayout title={title}>
-  <LargeHeading text="Cheat Sheets" />
-  <HorizontalLine />
+  <h1 class="text-3xl font-bold md:text-5xl">Cheat Sheets</h1>
+  <hr class="mt-4 border-slate-700 md:mt-6" />
   <section class="my-4 grid gap-4 sm:grid-cols-2 md:my-6 lg:grid-cols-3 lg:gap-6">
     {cheatSheets.map((cheatSheet) => <Panel title="Cheat sheet" body={cheatSheet.frontmatter?.feature} target={String(cheatSheet.url)} />)}
   </section>

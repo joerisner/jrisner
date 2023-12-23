@@ -1,9 +1,0 @@
----
-export interface Props {
-  classes?: string[];
-}
-
-const { classes = [] } = Astro.props;
----
-
-<hr class:list={['mt-4', 'border-slate-700', 'md:mt-6', ...classes]} />

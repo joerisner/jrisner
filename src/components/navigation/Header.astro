@@ -1,6 +1,5 @@
 ---
 import Logo from './Logo.astro';
-import NavLink from './NavLink.astro';
 ---
 
 <header class="flex items-center justify-between py-4">
@@ -11,9 +10,12 @@ import NavLink from './NavLink.astro';
   <div class="flex gap-6">
     <nav data-testid="navBar">
       <ul id="primary-nav" class="primary-nav flex items-center gap-12" data-visible="false">
-        <NavLink href="/" linkText="Home" />
-        <NavLink href="/cheat-sheets" linkText="Cheat Sheets" />
-        <NavLink href="/about" linkText="About" />
+        <li>
+          <a href="/" class="hover:text-muted" data-testid="navLink">Home</a>
+        </li>
+        <li>
+          <a href="/cheat-sheets" class="hover:text-muted" data-testid="navLink">Cheat Sheets</a>
+        </li>
       </ul>
     </nav>
     <div class="hidden items-center gap-6 lg:flex">
