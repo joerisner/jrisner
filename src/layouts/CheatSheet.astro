@@ -1,6 +1,5 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import LargeHeading from '@components/typography/LargeHeading.astro';
 import { SITE_TITLE } from '../config';
 
 export interface Props {
@@ -16,7 +15,7 @@ const {
 
 <BaseLayout title={`${feature} | ${SITE_TITLE}`}>
   <section class="mx-auto max-w-article">
-    <LargeHeading text={`${feature} Cheat Sheet`} />
+    <h1 class="text-3xl font-bold md:text-5xl">{feature} Cheat Sheet</h1>
   </section>
   <article id="markdown-content" class="mx-auto max-w-article">
     <slot />
