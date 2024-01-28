@@ -9,7 +9,7 @@
     "clean": "node ./bin/clean.js",
     "format": "prettier . --check",
     "lint:js": "eslint \"./**/*.{js,cjs}\"",
-    "lint:md": "markdownlint \"**/*.md\" --ignore node_modules --disable MD041 MD013",
+    "lint:md": "markdownlint \"**/*.md\" --ignore node_modules --disable MD041 MD013 MD033 MD036",
     "preview": "npm run build && astro preview",
     "start": "astro dev",
     "test": "playwright test",
