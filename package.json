@@ -22,7 +22,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@astrojs/check": "^0.4.1",
     "@playwright/test": "^1.41.1",
-    "astro": "^3.6.4",
+    "astro": "^4.3.2",
     "autoprefixer": "^10.4.17",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
