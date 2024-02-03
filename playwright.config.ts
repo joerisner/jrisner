@@ -3,7 +3,7 @@ import { devices } from '@playwright/test';
 
 const config: PlaywrightTestConfig = {
   expect: {
-    timeout: 6000,
+    timeout: 6000
   },
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
@@ -12,15 +12,15 @@ const config: PlaywrightTestConfig = {
     {
       name: 'chromium',
       use: {
-        ...devices['Desktop Chrome'],
-      },
+        ...devices['Desktop Chrome']
+      }
     },
     {
       name: 'webkit',
       use: {
-        ...devices['Desktop Safari'],
-      },
-    },
+        ...devices['Desktop Safari']
+      }
+    }
   ],
   reporter: [['dot'], ['html', { open: 'never', outputFolder: './specs/report' }]],
   retries: process.env.CI ? 2 : 0, // Retry on CI only
@@ -32,18 +32,18 @@ const config: PlaywrightTestConfig = {
     baseURL: 'http://localhost:4000',
     screenshot: {
       mode: 'only-on-failure',
-      fullPage: true,
+      fullPage: true
     },
-    trace: 'on-first-retry',
+    trace: 'on-first-retry'
   },
   // Start web server before running tests
   webServer: {
     command: 'npm run preview',
     reuseExistingServer: !process.env.CI,
     timeout: 30 * 1000,
-    url: 'http://localhost:4000', // Waits for 2xx, 3xx, or 4xx response before running tests
+    url: 'http://localhost:4000' // Waits for 2xx, 3xx, or 4xx response before running tests
   },
-  workers: process.env.CI ? 1 : undefined, // Opt out of parallel tests on CI
+  workers: process.env.CI ? 1 : undefined // Opt out of parallel tests on CI
 };
 
 export default config;

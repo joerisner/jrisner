@@ -10,7 +10,7 @@ test.describe('Cheat Sheets Page', () => {
       'Java Access Modifiers',
       'Java Annotations',
       'JavaScript Arrays',
-      'JPA Annotations',
+      'JPA Annotations'
     ];
     const allPanelTitles = await page.getByTestId('panel-title').all();
 
