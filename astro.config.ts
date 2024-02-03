@@ -5,13 +5,13 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [
     sitemap(),
-    tailwind({ applyBaseStyles: false }), // Importing these already in src/styles/global.css
+    tailwind({ applyBaseStyles: false }) // Importing these already in src/styles/global.css
   ],
   markdown: {
     shikiConfig: {
       theme: 'material-theme-palenight',
-      wrap: false,
-    },
+      wrap: false
+    }
   },
   server: { port: 4000 },
   site: 'https://jrisner.dev',
@@ -19,9 +19,9 @@ export default defineConfig({
     build: {
       rollupOptions: {
         output: {
-          assetFileNames: 'assets/[hash][extname]',
-        },
-      },
-    },
-  },
+          assetFileNames: 'assets/[hash][extname]'
+        }
+      }
+    }
+  }
 });

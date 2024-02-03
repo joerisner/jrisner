@@ -13,15 +13,15 @@ module.exports = {
         muted: '#94a3b8',
         primary: '#8b5cf6',
         secondary: '#ffa28b',
-        tertiary: '#12b7bb',
+        tertiary: '#12b7bb'
       },
       fontFamily: {
         primary: ['Inter', ...fontFamily.sans],
-        code: ['Fira Code', ...fontFamily.mono],
+        code: ['Fira Code', ...fontFamily.mono]
       },
       maxWidth: {
-        article: '850px',
-      },
-    },
-  },
+        article: '850px'
+      }
+    }
+  }
 };
