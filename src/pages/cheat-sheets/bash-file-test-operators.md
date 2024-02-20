@@ -42,7 +42,7 @@ if [[ -s /path/to/file ]]; then echo "File is not empty"; fi
 _Return true if file has been modified since it was last read_
 
 ```sh
-if [[ -s /path/to/file ]]; then echo "File has been modified"; fi
+if [[ -N /path/to/file ]]; then echo "File has been modified"; fi
 ```
 
 ### `-nt`
