@@ -8,8 +8,10 @@ feature: 'Docker'
 ### _Build image from a Dockerfile_
 
 ```sh
-docker build -t <image_name>
-docker build -t <image_name> . --no-cache # Build the image without a cache
+docker build .
+docker build -t <image_name> .           # Build the image with a tag
+docker build --no-cache .                # Build the image without a cache
+docker build --build-arg="APP_VERSION" . # Build the image with build arguments
 ```
 
 ### _List local images_
@@ -21,7 +23,7 @@ docker images
 ### _Delete an image_
 
 ```sh
-docker rmi <image_name>
+docker rm <image_name>
 ```
 
 ### _Remove all unused images_
@@ -83,7 +85,7 @@ docker stop <container_name_or_id>
 
 ```sh
 docker attach <container_name>       # Attach to a detached container so it runs in foreground
-docker logs <container_name>         # Fetch and follow the logs of a container
+docker logs <container_name>         # Fetch and trail the logs of a container
 docker exec -it <container_name> sh  # Open a shell (sh/bash/etc.) inside a running container
 ```
 
