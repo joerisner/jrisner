@@ -9,9 +9,11 @@ feature: 'Docker'
 
 ```sh
 docker build .
-docker build -t <image_name> .           # Build the image with a tag
-docker build --no-cache .                # Build the image without a cache
-docker build --build-arg="APP_VERSION" . # Build the image with build arguments
+
+# Options
+-t, --tag      # Build the image with a tag
+--no-cache     # Build the image without using a cache
+--build-arg    # Build the image with a build argument
 ```
 
 ### _List local images_
