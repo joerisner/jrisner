@@ -7,3 +7,15 @@ My personal dev site. I primarily use this site for cheat sheets: a web-accessib
 - [Astro + TypeScript](https://astro.build/) :rocket:
 - [Tailwind CSS](https://tailwindcss.com/) :dash:
 - [Playwright](https://playwright.dev) :performing_arts:
+
+Start the application.
+
+```sh
+make
+```
+
+Run tests.
+
+```sh
+make test
+```
