@@ -7,7 +7,7 @@ const config: PlaywrightTestConfig = {
   },
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
-  outputDir: './specs/artifacts',
+  outputDir: './test/artifacts',
   projects: [
     {
       name: 'chromium',
@@ -22,9 +22,9 @@ const config: PlaywrightTestConfig = {
       }
     }
   ],
-  reporter: [['dot'], ['html', { open: 'never', outputFolder: './specs/report' }]],
+  reporter: [['dot'], ['html', { open: 'never', outputFolder: './test/report' }]],
   retries: process.env.CI ? 2 : 0, // Retry on CI only
-  testDir: './specs',
+  testDir: './test',
   timeout: 30 * 1000, // Maximum time one test can run
   // Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions
   use: {

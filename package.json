@@ -5,14 +5,10 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "build": "astro build",
-    "clean": "node ./bin/clean.js",
     "format": "prettier . --check",
     "lint:js": "eslint \"./**/*.{js,cjs}\"",
     "lint:md": "markdownlint \"**/*.md\" --ignore node_modules --disable MD041 MD013 MD033 MD036",
-    "preview": "npm run build && astro preview",
-    "start": "astro dev",
-    "test": "playwright test",
+    "preview": "astro preview",
     "test:report": "playwright show-report ./specs/report",
     "test:ui": "playwright test --ui",
     "typecheck": "astro check && tsc --noEmit"
