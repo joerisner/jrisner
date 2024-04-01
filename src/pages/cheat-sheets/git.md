@@ -16,9 +16,9 @@ git reset --hard [<commit>]
 # Reset to a specific commit, but keep unstaged & working directory changes
 git reset --soft [<commit>]
 
-# Reset HEAD to origin (master branch in this example)
+# Reset HEAD to origin (main branch in this example)
 git fetch origin
-git reset --hard origin/master
+git reset --hard origin/main
 ```
 
 ### [`revert`](#revert)
