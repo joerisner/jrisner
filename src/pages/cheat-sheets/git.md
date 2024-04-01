@@ -51,6 +51,14 @@ _Removes upstream tracking of a branch. If no branch is specified it defaults to
 git branch --unset-upstream [<branch>]
 ```
 
+### [`fetch --prune`](#fetch---prune)
+
+_Remove references to remote branches that no longer exist. I prefer to setting `fetch.prune` to `true` in my .gitconfig over this, though._
+
+```sh
+git fetch --prune
+```
+
 ## [Logs](#logs)
 
 ### `--pretty=short --graph`
