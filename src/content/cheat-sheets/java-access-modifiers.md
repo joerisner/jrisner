@@ -1,6 +1,7 @@
 ---
-layout: '../../layouts/CheatSheet.astro'
-feature: 'Java Access Modifiers'
+title: 'Java Access Modifiers'
+type: 'Java'
+isDraft: false
 ---
 
 ## [Classes, Attributes and Methods](#classes-attributes-and-methods)

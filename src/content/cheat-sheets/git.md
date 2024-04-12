@@ -1,6 +1,7 @@
 ---
-layout: '../../layouts/CheatSheet.astro'
-feature: 'Git'
+title: 'Git'
+type: 'Git'
+isDraft: false
 ---
 
 ## [Commits](#commits)
