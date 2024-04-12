@@ -1,8 +1,0 @@
-{
-  // https://eslint.org/docs/latest/user-guide/configuring/configuration-files#using-configuration-files
-  "env": { "node": true },
-  "extends": ["eslint:recommended", "prettier"],
-  "ignorePatterns": ["dist/"],
-  "parserOptions": { "ecmaVersion": 6, "sourceType": "module" },
-  "plugins": ["prettier"]
-}
