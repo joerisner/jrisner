@@ -1,0 +1,27 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro'
+import { getCollection } from 'astro:content';
+import { SITE_TITLE } from '../../config';
+
+export const getStaticPaths = async () => {
+  const publishedSheets = await getCollection('cheat-sheets', ({ data }) => data.isDraft === false);
+
+  return publishedSheets.map(sheet => ({
+    params: { slug: sheet.slug },
+    props: { sheet }
+  }));
+};
+
+const { sheet } = Astro.props;
+const { title } = sheet.data;
+const { Content } = await sheet.render();
+---
+
+<BaseLayout title={`${title} | ${SITE_TITLE}`}>
+  <section class="mx-auto max-w-article">
+    <h1 class="text-3xl font-bold md:text-5xl">{title}</h1>
+  </section>
+  <article id="markdown-content" class="mx-auto max-w-article">
+    <Content />
+  </article>
+</BaseLayout>

@@ -1,6 +1,7 @@
 ---
-layout: '../../layouts/CheatSheet.astro'
-feature: 'JavaScript Arrays'
+title: 'JavaScript Arrays'
+type: 'JavaScript'
+isDraft: false
 ---
 
 ## [Return a single element](#return-a-single-element)

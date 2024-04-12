@@ -1,6 +1,7 @@
 ---
-layout: '../../layouts/CheatSheet.astro'
-feature: 'Bash File Test Operators'
+title: 'Bash File Test Operators'
+type: 'Shell'
+isDraft: false
 ---
 
 ## File Test Operators

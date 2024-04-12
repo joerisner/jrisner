@@ -1,6 +1,7 @@
 ---
-layout: '../../layouts/CheatSheet.astro'
-feature: 'JPA Annotations'
+title: 'JPA Annotations'
+type: 'Java'
+isDraft: false
 ---
 
 ## Classes

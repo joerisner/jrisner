@@ -1,6 +1,7 @@
 ---
-layout: '../../layouts/CheatSheet.astro'
-feature: 'DNF and MicroDNF'
+title: 'DNF and MicroDNF'
+type: 'Shell'
+isDraft: false
 ---
 
 ## [Update packages to latest versions](#update-packages-to-latest-versions)

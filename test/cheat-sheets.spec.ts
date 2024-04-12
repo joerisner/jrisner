@@ -6,7 +6,8 @@ test.describe('Cheat Sheets Page', () => {
       'Bash File Test Operators',
       'Bash String Test Operators',
       'DNF and MicroDNF',
-      'Docker',
+      'Docker Containers',
+      'Docker Images',
       'Git',
       'Java Access Modifiers',
       'Java Annotations',
@@ -18,10 +19,6 @@ test.describe('Cheat Sheets Page', () => {
     await page.goto('/cheat-sheets');
     await expect(page.getByTestId('panel')).toHaveCount(expectedCheatSheets.length);
     await expect(page.getByTestId('panel-body')).toHaveText(expectedCheatSheets);
-
-    for (const panelTitle of allPanelTitles) {
-      await expect(panelTitle).toHaveText('Cheat sheet');
-    }
 
     for (const [index, feature] of expectedCheatSheets.entries()) {
       await page.getByTestId('panel').nth(index).click();

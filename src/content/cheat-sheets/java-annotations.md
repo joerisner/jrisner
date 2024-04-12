@@ -1,6 +1,7 @@
 ---
-layout: '../../layouts/CheatSheet.astro'
-feature: 'Java Annotations'
+title: 'Java Annotations'
+type: 'Java'
+isDraft: false
 ---
 
 ## [Core Java](#core-java)

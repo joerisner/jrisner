@@ -1,6 +1,7 @@
 ---
-layout: '../../layouts/CheatSheet.astro'
-feature: 'Bash String Test Operators'
+title: 'Bash String Test Operators'
+type: 'Shell'
+isDraft: false
 ---
 
 ## String Test Operators
