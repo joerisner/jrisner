@@ -1,6 +1,6 @@
 ---
 title: 'DNF and MicroDNF'
-type: 'Shell'
+type: 'Bash/Shell'
 isDraft: false
 ---
 

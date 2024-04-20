@@ -5,6 +5,7 @@
     { "files": ["*.css"], "options": { "singleQuote": false } },
     { "files": ["*.astro", "*.html"], "options": { "printWidth": 160 } }
   ],
+  "plugins": ["prettier-plugin-astro"],
   "printWidth": 120,
   "semi": true,
   "singleQuote": true,

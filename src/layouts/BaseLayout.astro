@@ -15,7 +15,7 @@ const { title, description, socialImage, centerMainContent = false } = Astro.pro
 const mainClasses = centerMainContent ? [] : ['mt-4', 'flex-grow', 'md:mt-8'];
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="motion-safe:scroll-smooth">
   <head><Head title={title} description={description} socialImage={socialImage} /></head>
   <body class="overflow-x-hidden bg-black bg-gradient-to-b from-black to-slate-900 bg-cover font-primary text-default md:text-lg">
