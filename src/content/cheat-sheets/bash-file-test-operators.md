@@ -1,6 +1,6 @@
 ---
 title: 'Bash File Test Operators'
-type: 'Shell'
+type: 'Bash/Shell'
 isDraft: false
 ---
 

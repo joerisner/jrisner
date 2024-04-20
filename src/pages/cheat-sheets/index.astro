@@ -1,17 +1,33 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Panel from '@components/Panel.astro';
-import { SITE_TITLE } from '../../config';
+import { SITE_TITLE } from 'src/config';
+import { CHEAT_SHEET_TYPES } from 'src/content/config';
 import { getCollection } from 'astro:content';
 
 const title = `Cheat Sheets | ${SITE_TITLE}`;
 const cheatSheets = await getCollection('cheat-sheets', ({ data }) => data.isDraft === false);
+
+const filterCheatSheetsByType = (type: string) => cheatSheets.filter((sheet) => sheet.data.type === type);
+
+const groupedCheatSheets = CHEAT_SHEET_TYPES.map((type) => ({ type, content: filterCheatSheetsByType(type) }));
 ---
 
 <BaseLayout title={title}>
   <h1 class="text-3xl font-bold md:text-5xl">Cheat Sheets</h1>
   <hr class="mt-4 border-slate-700 md:mt-6" />
-  <section class="my-4 grid gap-4 sm:grid-cols-2 md:my-6 lg:grid-cols-3 lg:gap-6">
-    {cheatSheets.map((cheatSheet) => <Panel title={cheatSheet.data.type} body={cheatSheet.data.title} target={`/cheat-sheets/${cheatSheet.slug}`} />)}
+  <section class="my-4">
+    {
+      groupedCheatSheets.map((group) => (
+        <div>
+          <h2 class="pl-2 text-xl font-bold text-secondary md:text-2xl">{group.type}</h2>
+          <div class="my-4 grid gap-4 sm:grid-cols-2 md:my-6 lg:grid-cols-3 lg:gap-6">
+            {group.content.map((entry) => (
+              <Panel title="Cheat Sheet" body={entry.data.title} target={`/cheat-sheets/${entry.slug}`} />
+            ))}
+          </div>
+        </div>
+      ))
+    }
   </section>
 </BaseLayout>

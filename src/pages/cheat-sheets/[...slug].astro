@@ -1,12 +1,12 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro'
+import BaseLayout from '@layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { SITE_TITLE } from '../../config';
+import { SITE_TITLE } from 'src/config';
 
 export const getStaticPaths = async () => {
   const publishedSheets = await getCollection('cheat-sheets', ({ data }) => data.isDraft === false);
 
-  return publishedSheets.map(sheet => ({
+  return publishedSheets.map((sheet) => ({
     params: { slug: sheet.slug },
     props: { sheet }
   }));

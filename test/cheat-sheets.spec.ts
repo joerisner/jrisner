@@ -11,10 +11,9 @@ test.describe('Cheat Sheets Page', () => {
       'Git',
       'Java Access Modifiers',
       'Java Annotations',
-      'JavaScript Arrays',
-      'JPA Annotations'
+      'JPA Annotations',
+      'JavaScript Arrays'
     ];
-    const allPanelTitles = await page.getByTestId('panel-title').all();
 
     await page.goto('/cheat-sheets');
     await expect(page.getByTestId('panel')).toHaveCount(expectedCheatSheets.length);
