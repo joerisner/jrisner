@@ -6,6 +6,7 @@ test.describe('Cheat Sheets Page', () => {
       'Bash File Test Operators',
       'Bash String Test Operators',
       'DNF and MicroDNF',
+      'printf Color Output',
       'Docker Containers',
       'Docker Images',
       'Git',
