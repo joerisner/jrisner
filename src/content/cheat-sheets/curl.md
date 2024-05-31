@@ -17,6 +17,12 @@ curl -s -o /dev/null -w "%{http_code}\n" http://example.com  #=> 200
 -w "%{http_code}\n"  # Write-out the numerical response code (+ newline)
 ```
 
+_Pretty-print JSON response body using `jq` (must have jq installed already)_
+
+```sh
+curl -s https://highlights-api-production.up.railway.app/random | jq .
+```
+
 ## [Download to File](#download-to-file)
 
 _Write output to a local file instead of stdout_
