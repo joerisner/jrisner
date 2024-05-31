@@ -5,6 +5,7 @@ test.describe('Cheat Sheets Page', () => {
     const expectedCheatSheets = [
       'Bash File Test Operators',
       'Bash String Test Operators',
+      'cURL',
       'DNF and MicroDNF',
       'printf Color Output',
       'Docker Containers',
