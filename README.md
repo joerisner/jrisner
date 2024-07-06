@@ -8,7 +8,7 @@ My personal dev site. I primarily use this site for cheat sheets: a web-accessib
 - [Tailwind CSS](https://tailwindcss.com/) :dash:
 - [Playwright](https://playwright.dev) :performing_arts:
 
-Start the application.
+Start the dev server on port 4000.
 
 ```sh
 make
