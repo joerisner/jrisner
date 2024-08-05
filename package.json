@@ -19,7 +19,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@playwright/test": "^1.45.3",
     "astro": "^4.12.2",
-    "autoprefixer": "^10.4.19",
+    "autoprefixer": "^10.4.20",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
