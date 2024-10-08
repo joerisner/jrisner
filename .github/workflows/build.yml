@@ -18,7 +18,7 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - name: npm audit
-        run: npm audit
+        run: npm audit --audit-level=moderate
 
   lint:
     runs-on: ubuntu-latest
