@@ -20,7 +20,7 @@ jobs:
       - name: npm audit
         run: npm audit --audit-level=moderate
 
-  lint:
+  check-format:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -31,11 +31,5 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
-      - name: typecheck
-        run: npm run typecheck
-      - name: eslint
-        run: npm run lint:js
-      - name: markdownlint
-        run: npm run lint:md
-      - name: prettier
-        run: npm run format
+      - name: check format and types
+        run: make check
