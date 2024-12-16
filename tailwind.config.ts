@@ -1,9 +1,7 @@
-// ESM is not yet supported for this file by Tailwind.
-//  Reference: https://github.com/tailwindlabs/tailwindcss/discussions/2284
-const { fontFamily } = require('tailwindcss/defaultTheme');
+import type { Config } from 'tailwindcss';
+import { fontFamily } from 'tailwindcss/defaultTheme';
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: ['./src/**/*.{astro,html,js,md}'],
   plugins: [],
   theme: {
@@ -24,4 +22,4 @@ module.exports = {
       }
     }
   }
-};
+} satisfies Config;
