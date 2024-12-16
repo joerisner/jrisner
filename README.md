@@ -11,7 +11,7 @@ My personal dev site. I primarily use this site for cheat sheets: a web-accessib
 Start the dev server on port 4000.
 
 ```sh
-make
+make dev
 ```
 
 Run tests.
