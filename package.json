@@ -11,7 +11,7 @@
     "lint:js": "eslint \"./**/*.{js,cjs}\"",
     "lint:md": "markdownlint \"**/*.md\" --ignore node_modules --disable MD041 MD013",
     "preview": "npm run build && astro preview",
-    "start": "astro dev",
+    "start": "npm run clean && npm install && astro dev",
     "test": "playwright test",
     "test:report": "playwright show-report ./specs/report",
     "test:ui": "playwright test --ui",

@@ -1,6 +1,13 @@
 import { rm } from 'fs';
 
-const removeList = ['./.astro/', './dist/', './specs/artifacts/', './specs/report/', '.playwright/.cache/'];
+const removeList = [
+  './.astro/',
+  './dist/',
+  './specs/artifacts/',
+  './specs/report/',
+  '.playwright/.cache/',
+  './node_modules',
+];
 
 const removeItem = (item) => {
   rm(item, { force: true, recursive: true }, (error) => {
