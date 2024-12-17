@@ -1,0 +1,46 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  image: string;
+  publishDate: Date;
+  tags: Array<string>;
+  target: string | undefined;
+}
+
+const { title, description, image, publishDate, tags, target } = Astro.props;
+---
+
+<article class="grid gap-6 lg:grid-cols-2 lg:gap-8">
+  <a href={target}>
+    <img
+      alt={`Hero image for blog post with title ${title}`}
+      class="w-full rounded-lg"
+      decoding="async"
+      data-testid="postImage"
+      src={image}
+      width="730"
+      height="485"
+    />
+  </a>
+  <div>
+    <a href={target}>
+      <h2 class="text-xl font-bold text-secondary md:text-2xl">{title}</h2>
+    </a>
+    <div class="mb-4">
+      <time class="text-sm text-muted md:text-base" datetime={publishDate.toISOString()}>
+        {publishDate.toLocaleDateString('en-us', { day: '2-digit', month: 'long', year: 'numeric', timeZone: 'UTC' })}
+      </time>
+      <p data-testid="postDescription">{description}</p>
+      <ul class="flex flex-wrap gap-4">
+        {
+          tags.map((tag) => (
+            <li>
+              <span class="rounded bg-primary px-2 py-1 text-base text-black">{tag}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</article>

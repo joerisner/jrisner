@@ -2,13 +2,22 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Panel from '@components/Panel.astro';
 import { SITE_TITLE } from 'src/config';
-import { CHEAT_SHEET_TYPES } from 'src/content/config';
+import { CHEAT_SHEET_TYPES } from 'src/content.config';
 import { getCollection } from 'astro:content';
 
 const title = `Cheat Sheets | ${SITE_TITLE}`;
-const cheatSheets = await getCollection('cheat-sheets', ({ data }) => data.isDraft === false);
+const cheatSheets = await getCollection('cheatSheets', ({ data }) => !data.isDraft);
 
-const filterCheatSheetsByType = (type: string) => cheatSheets.filter((sheet) => sheet.data.type === type);
+const filterCheatSheetsByType = (type: string) =>
+  cheatSheets
+    .filter((sheet) => sheet.data.type === type)
+    .sort((a, b) => {
+      if (a.data.title.toUpperCase() < b.data.title.toUpperCase()) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
 
 const groupedCheatSheets = CHEAT_SHEET_TYPES.map((type) => ({ type, content: filterCheatSheetsByType(type) }));
 ---
@@ -23,7 +32,7 @@ const groupedCheatSheets = CHEAT_SHEET_TYPES.map((type) => ({ type, content: fil
           <h2 class="pl-2 text-xl font-bold text-secondary md:text-2xl">{group.type}</h2>
           <div class="my-4 grid gap-4 sm:grid-cols-2 md:my-6 lg:grid-cols-3 lg:gap-6">
             {group.content.map((entry) => (
-              <Panel title="Cheat Sheet" body={entry.data.title} target={`/cheat-sheets/${entry.slug}`} />
+              <Panel title="Cheat Sheet" body={entry.data.title} target={`/cheat-sheets/${entry.id}`} />
             ))}
           </div>
         </div>
