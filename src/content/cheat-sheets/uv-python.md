@@ -4,7 +4,7 @@ type: 'Python'
 isDraft: false
 ---
 
-## Configuration
+## [Configuration](#configuration)
 
 _I set the following ENV vars in my shell's dotfile to have more control over `uv`'s Python version management on my system._
 
@@ -16,7 +16,9 @@ UV_PYTHON_DOWNLOADS=manual                       # Do not automatically download
 UV_PYTHON_PREFERENCE=only-managed                # Only use managed Python installations; never use system Python installations
 ```
 
-## [install](#install)
+## [Commands](#commands)
+
+### [`install`](#install)
 
 _Install Python versions. Python versions are installed into the `uv` Python directory, which can be retrieved by `uv python dir` (see <u>[below](#dir))</u>. If no version is supplied, `uv` will install the version found in the `.python-version` file. If that file is not found, `uv` checks if it has installed any versions, and if it hasn't, it installs the latest stable version of Python._
 
@@ -30,7 +32,7 @@ uv python install  # Optionally supply a version to install. Example: uv python 
 -f, --force        # Replace existing Python executables during installation. Implies --reinstall.
 ```
 
-## [list](#list)
+### [`list`](#list)
 
 _List installed Python versions. By default, downloads for other platforms and old patch versions are hidden._
 
@@ -44,7 +46,7 @@ uv python list
 --only-downloads   # Only show Python downloads, exclude installed distros
 ```
 
-## [dir](#dir)
+### [`dir`](#dir)
 
 _Show the `uv` Python installation directory. Defaults to `~/.local/share/uv/python`._
 
@@ -55,7 +57,7 @@ uv python dir
 --bin              # Show the directory into which `uv python` will install Python executables
 ```
 
-## [find](#find)
+### [`find`](#find)
 
 _Find an installed Python version. By default, this will display the path to the first available Python executable, including Python versions from virtual environments._
 
@@ -66,7 +68,7 @@ uv python find     # Optionally supply a version to find. Example: uv python fin
 --system           # Only find system Python interpreters (no virtual environment Pythons)
 ```
 
-## [pin](#pin)
+### [`pin`](#pin)
 
 _Pin the current project to use a specific Python version. This creates a `.python-version` file in the working directory, unless one already exists._
 
@@ -74,7 +76,7 @@ _Pin the current project to use a specific Python version. This creates a `.pyth
 uv python pin <version>
 ```
 
-## [uninstall](#uninstall)
+### [`uninstall`](#uninstall)
 
 _Uninstall a `uv` managed Python version._
 

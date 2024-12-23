@@ -8,7 +8,7 @@ test.describe('Home Page', () => {
     await page.goto('/');
     await expect(githubLink).toBeVisible();
     await expect(githubLink).toHaveAttribute('href', 'https://github.com/joerisner');
-    await expect(ctaButton).toHaveText('Check out the cheat sheets');
-    await expect(ctaButton).toHaveAttribute('href', '/cheat-sheets');
+    await expect(ctaButton).toHaveText('See my latest posts');
+    await expect(ctaButton).toHaveAttribute('href', '/blog');
   });
 });
