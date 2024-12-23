@@ -14,7 +14,8 @@ test.describe('Cheat Sheets Page', () => {
       'Java Access Modifiers',
       'Java Annotations',
       'JPA Annotations',
-      'JavaScript Arrays'
+      'JavaScript Arrays',
+      'uv python'
     ];
 
     await page.goto('/cheat-sheets');
