@@ -1,7 +1,7 @@
 import { glob } from 'astro/loaders';
 import { defineCollection, z } from 'astro:content';
 
-export const CHEAT_SHEET_TYPES = ['Bash/Shell', 'Docker', 'Git', 'Java', 'JavaScript'] as const;
+export const CHEAT_SHEET_TYPES = ['Bash/Shell', 'Docker', 'Git', 'Java', 'JavaScript', 'Python'] as const;
 
 const blog = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
