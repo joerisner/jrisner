@@ -18,7 +18,7 @@ const { Content } = await render(post);
 ---
 
 <BaseLayout title={`${title} | ${SITE_TITLE}`}>
-  <section class="mx-auto mb-12 max-w-blog text-center" data-testid="postSummary">
+  <section class="mx-auto mb-12 max-w-article text-center" data-testid="postSummary">
     <h1 class="text-3xl font-bold md:text-5xl">{title}</h1>
     <div class="mb-8 mt-2">
       <time class="text-sm text-muted md:text-base" datetime={publishDate.toISOString()}>
@@ -27,7 +27,7 @@ const { Content } = await render(post);
     </div>
     <img src={heroImage} alt="Post Hero Image" class="rounded-2xl" />
   </section>
-  <article id="markdown-content" class="max-w-blog">
+  <article id="markdown-content" class="max-w-article mx-auto">
     <Content />
   </article>
 </BaseLayout>
