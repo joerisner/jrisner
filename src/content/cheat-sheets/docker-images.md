@@ -6,7 +6,7 @@ isDraft: false
 
 ## [Images](#images)
 
-### _Build image from a Dockerfile_
+_Build image from a Dockerfile._
 
 ```sh
 docker build .
@@ -17,26 +17,21 @@ docker build .
 --build-arg    # Build the image with a build argument
 ```
 
-### _List local images_
+_List local images._
 
 ```sh
 docker images
 ```
 
-### _Delete an image_
+_Remove images._
 
 ```sh
-docker rm <image_name>
+docker rm <image_name>   # Remove a single image
+docker image prune       # Remove all unused images
 ```
 
-### _Remove all unused images_
+_Pull an image from Docker Hub._
 
 ```sh
-docker image prune
-```
-
-### _Pull an image from Docker Hub_
-
-```sh
-docker pull <image_name>
+docker pull <repository>:<tag>  # Docker engine will pull the latest version if tag is omitted
 ```

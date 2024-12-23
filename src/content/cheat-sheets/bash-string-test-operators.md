@@ -4,11 +4,11 @@ type: 'Bash/Shell'
 isDraft: false
 ---
 
-## String Test Operators
+## String test operators
 
 ### `=`, `==`
 
-_Return true if strings are equal. Double-equals is bash-specific and not supported in other shells._
+_Return true if strings are equal. Prefer `=` over `==` when portability is a concern._
 
 ```sh
 if [[ "str1" = "str2" ]]; then echo "Strings are equal"; fi

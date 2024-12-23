@@ -4,7 +4,7 @@ type: 'Java'
 isDraft: false
 ---
 
-## [Classes, Attributes and Methods](#classes-attributes-and-methods)
+## [Classes, attributes and methods](#classes-attributes-and-methods)
 
 ### `public`
 

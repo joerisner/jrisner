@@ -6,7 +6,7 @@ isDraft: false
 
 ## [Containers](#containers)
 
-### _Create and run a container from an image_
+_Create and run a container from an image._
 
 ```sh
 docker run <image_name>
@@ -20,7 +20,7 @@ docker run <image_name>
 -v, --volume    # Mount (create) a named volume for data persistence beyond container lifecycle
 ```
 
-### _List containers_
+_List containers._
 
 ```sh
 docker ps # List running containers
@@ -32,7 +32,7 @@ docker ps # List running containers
 -s, --size      # Display total file sizes
 ```
 
-### _Start an existing container_
+_Start an existing container._
 
 ```sh
 docker start <container_name_or_id>
@@ -41,13 +41,13 @@ docker start <container_name_or_id>
 -a, --attach    # Attach STDOUT and forward signals
 ```
 
-### _Stop a running container_
+_Stop a running container._
 
 ```sh
 docker stop <container_name_or_id>
 ```
 
-### _Accessing containers_
+_Accessing containers._
 
 ```sh
 docker attach <container_name>       # Attach to a detached container so it runs in foreground
@@ -55,13 +55,13 @@ docker logs <container_name>         # Fetch and trail the logs of a container
 docker exec -it <container_name> sh  # Open a shell (sh/bash/etc.) inside a running container
 ```
 
-### _Copying files from host machine to container_
+_Copying files from host machine to container._
 
 ```sh
 docker cp local/test.txt <container_name>:/app
 ```
 
-### _Removing containers_
+_Removing containers._
 
 ```sh
 docker rm <container_name>  # Remove a single (stopped) container
