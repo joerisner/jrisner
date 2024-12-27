@@ -20,7 +20,7 @@ UV_PYTHON_PREFERENCE=only-managed                # Only use managed Python insta
 
 ### [`install`](#install)
 
-_Install Python versions. Python versions are installed into the `uv` Python directory, which can be retrieved by `uv python dir` (see <u>[below](#dir))</u>. If no version is supplied, `uv` will install the version found in the `.python-version` file. If that file is not found, `uv` checks if it has installed any versions, and if it hasn't, it installs the latest stable version of Python._
+_Install Python versions. Python versions are installed into the `uv` Python directory, which can be retrieved by `uv python dir` (see [below](#dir)). If no version is supplied, `uv` will install the version found in the `.python-version` file. If that file is not found, `uv` checks if it has installed any versions, and if it hasn't, it installs the latest stable version of Python._
 
 ```sh
 uv python install  # Optionally supply a version to install. Example: uv python install 3.12

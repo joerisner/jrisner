@@ -32,7 +32,7 @@ printf "\033[37;1mDevelopers!\033[0m\n"   # white
 
 ## [Text effects](#text-effects)
 
-Patterns listed below are for **red** text. To use the same effects for other colors, change `31` to one of the other color values as demonstrated in the <u>[colors](#colors)</u> section above.
+Patterns listed below are for **red** text. To use the same effects for other colors, change `31` to one of the other color values as demonstrated in the [colors](#colors) section above.
 
 ```sh
 printf "\033[31;2mDevelopers!\033[0m\n"   # faint
