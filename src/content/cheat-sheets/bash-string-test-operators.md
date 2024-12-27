@@ -16,7 +16,7 @@ if [[ "str1" = "str2" ]]; then echo "Strings are equal"; fi
 
 ### `-z`
 
-_Return true if string is null (has a zero length). <ins>**[Always quote](https://tldp.org/LDP/abs/html/comparison-ops.html#STRTEST)**</ins> the tested string._
+_Return true if string is null (has a zero length). [Always quote](https://tldp.org/LDP/abs/html/comparison-ops.html#STRTEST) the tested string._
 
 ```sh
 STR=""
@@ -25,7 +25,7 @@ if [[ -z "$STR" ]]; then echo "String is null"; fi
 
 ### `-n`
 
-_Return true if string is **not** null. <ins>**[Always quote](https://tldp.org/LDP/abs/html/comparison-ops.html#STRTEST)**</ins> the tested string._
+_Return true if string is **not** null. [Always quote](https://tldp.org/LDP/abs/html/comparison-ops.html#STRTEST) the tested string._
 
 ```sh
 STR="foo"
