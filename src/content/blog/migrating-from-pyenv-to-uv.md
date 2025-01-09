@@ -39,7 +39,7 @@ brew update && brew install uv
 
 ### Configuring uv
 
-Once uv was installed, I added some configuration preferences prior to installing Python versions. One of the things I liked about pyenv was that it placed everything in a single, easily identifiable `.pyenv` directory in my `HOME` directory. Rather than having binaries and configurations spread across my system, I knew that all things pyenv-related could be found in that directory. I wanted to replicate that behavior with uv as much as possible by creating a single `~/.uv` directory. To that aim, I set the following ENV vars in my `.zshrc`.
+Once uv was installed, I added some configuration preferences prior to installing Python versions. One of the things I like about pyenv is that it places everything in a single, easily identifiable `.pyenv` directory in my `HOME` directory. Rather than having binaries and configurations spread across my system, I know that all things pyenv-related can be found in that directory. I wanted to replicate that behavior with uv as much as possible by creating a single `~/.uv` directory. To that aim, I set the following ENV vars in my `.zshrc`.
 
 ```sh
 UV_DIR="${HOME}/.uv"
@@ -54,7 +54,7 @@ export PATH="${UV_PYTHON_BIN_DIR}:${PATH}"
 - `UV_CONFIG_FILE`: Use `$HOME/.uv/uv.toml` as a configuration file for uv.
 - `UV_PYTHON_INSTALL_DIR`: Install all Python versions in `$HOME/.uv/python/versions`.
 - `UV_PYTHON_BIN_DIR`: Use `$HOME/.uv/python/bin` as the directory for symlinks to Python executables.
-- `PATH`: Prepend `UV_PYTHON_BIN_DIR` to my `PATH` to enable `python`, `python3` executables.
+- `PATH`: Prepend `UV_PYTHON_BIN_DIR` to my `PATH` to enable `python` and `python3` executables.
 
 After configuring the `.uv` directory, I added the following preferences as ENV vars.
 
