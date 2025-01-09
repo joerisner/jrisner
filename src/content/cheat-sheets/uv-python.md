@@ -4,23 +4,11 @@ type: 'Python'
 isDraft: false
 ---
 
-## [Configuration](#configuration)
-
-_I set the following ENV vars in my shell's dotfile to have more control over `uv`'s Python version management on my system._
-
-```sh
-UV_CACHE_DIR=$HOME/.uv/cache                     # Cache everything in ~/.uv
-UV_CONFIG_FILE=$HOME/.uv/uv.toml                 # Path to uv config file
-UV_PYTHON_INSTALL_DIR=$HOME/.uv/python/versions  # Path to Python installations
-UV_PYTHON_DOWNLOADS=manual                       # Do not automatically download managed Python installations
-UV_PYTHON_PREFERENCE=only-managed                # Only use managed Python installations; never use system Python installations
-```
-
 ## [Commands](#commands)
 
 ### [`install`](#install)
 
-_Install Python versions. Python versions are installed into the `uv` Python directory, which can be retrieved by `uv python dir` (see [below](#dir)). If no version is supplied, `uv` will install the version found in the `.python-version` file. If that file is not found, `uv` checks if it has installed any versions, and if it hasn't, it installs the latest stable version of Python._
+_Install Python versions. Python versions are installed into the `uv` Python directory (configurable with `UV_PYTHON_INSTALL_DIR`), which can be retrieved by `uv python dir` (see [below](#dir)). If no version is supplied, `uv` will install the version found in the `.python-version` file. If that file is not found, `uv` checks if it has installed any versions, and if it hasn't, it installs the latest stable version of Python._
 
 ```sh
 uv python install  # Optionally supply a version to install. Example: uv python install 3.12
