@@ -15,6 +15,7 @@ test.describe('Cheat Sheets Page', () => {
       'Java Annotations',
       'JPA Annotations',
       'JavaScript Arrays',
+      'uv Dependency Management',
       'uv python'
     ];
 
