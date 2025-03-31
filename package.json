@@ -13,7 +13,7 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/sitemap": "^3.3.0",
-    "@astrojs/tailwind": "^6.0.1",
+    "@astrojs/tailwind": "^6.0.2",
     "@playwright/test": "^1.51.1",
     "astro": "^5.5.4",
     "autoprefixer": "^10.4.21",
