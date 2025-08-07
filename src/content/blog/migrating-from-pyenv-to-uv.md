@@ -20,7 +20,7 @@ For years, [pyenv](https://github.com/pyenv/pyenv) has been the Python community
 The first thing I did was removed all references to pyenv from my machine. I started by removing the `~/.pyenv` directory. This removed all pyenv-managed Python installations.
 
 ```sh
-rm -rf ~/.pyenv
+rm -rf $(pyenv root)
 ```
 
 Next, I removed all pyenv initialization scripts that I had configured in my `.zshrc` file. Lastly, since I use [Homebrew](https://brew.sh/) for managing system packages, I used that to remove pyenv completely.
@@ -42,19 +42,23 @@ brew update && brew install uv
 Once uv was installed, I added some configuration preferences prior to installing Python versions. One of the things I like about pyenv is that it places everything in a single, easily identifiable `.pyenv` directory in my `HOME` directory. Rather than having binaries and configurations spread across my system, I know that all things pyenv-related can be found in that directory. I wanted to replicate that behavior with uv as much as possible by creating a single `~/.uv` directory. To that aim, I set the following ENV vars in my `.zshrc`.
 
 ```sh
-UV_DIR="${HOME}/.uv"
+export UV_DIR="${HOME}/.uv"
 export UV_CACHE_DIR="${UV_DIR}/cache"
 export UV_CONFIG_FILE="${UV_DIR}/uv.toml"
 export UV_PYTHON_INSTALL_DIR="${UV_DIR}/python/versions"
 export UV_PYTHON_BIN_DIR="${UV_DIR}/python/bin"
-export PATH="${UV_PYTHON_BIN_DIR}:${PATH}"
+export UV_TOOL_DIR="${UV_DIR}/tools"
+export UV_TOOL_BIN_DIR="${UV_DIR}/tools/bin"
+export PATH="${UV_PYTHON_BIN_DIR}:${UV_TOOL_BIN_DIR}:${PATH}"
 ```
 
 - `UV_CACHE_DIR`: Store cache under `$HOME/.uv/cache`.
 - `UV_CONFIG_FILE`: Use `$HOME/.uv/uv.toml` as a configuration file for uv.
 - `UV_PYTHON_INSTALL_DIR`: Install all Python versions in `$HOME/.uv/python/versions`.
 - `UV_PYTHON_BIN_DIR`: Use `$HOME/.uv/python/bin` as the directory for symlinks to Python executables.
-- `PATH`: Prepend `UV_PYTHON_BIN_DIR` to my `PATH` to enable `python` and `python3` executables.
+- `UV_TOOL_DIR`: Install all uv tools in `$HOME/.uv/tools`.
+- `UV_TOOL_BIN_DIR`: Use `$HOME/.uv/tools/bin` as the directory for symlinks to uv tool executables.
+- `PATH`: Prepend `UV_PYTHON_BIN_DIR` and `UV_TOOL_BIN_DIR` to my `PATH` to enable `python` and tool executables.
 
 After configuring the `.uv` directory, I added the following preferences as ENV vars.
 
@@ -77,13 +81,13 @@ source ~/.zshrc
 Prior to installing a Python version, I created the `~/.uv/python` directory to store everything `uv python`-related, and a `uv.toml` file for configuring uv. Currently, this file is empty but will be used in the future for configuring uv tools and projects.
 
 ```sh
-mkdir -p ~/.uv/python && touch ~/.uv/uv.toml
+mkdir -p ${UV_DIR}/python && touch ${UV_DIR}/uv.toml
 ```
 
-Finally, I installed Python version `3.12`. As of the time of this writing, installing [Python executables](https://docs.astral.sh/uv/concepts/python-versions/#installing-python-executables) is in preview mode, so the `--preview` option is required (or the `UV_PREVIEW` ENV var) for enabling that feature. I also like to have a `python` executable in addition to something like `python3` or `python3.12`, so I added the `--default` option in order to create those symlinks in the `~/.uv/python/bin` directory as well.
+Finally, I installed Python version `3.12`. I also like to have a `python` executable in addition to something like `python3` or `python3.12`, so I added the `--default` option in order to create those symlinks in the `~/.uv/python/bin` directory as well.
 
 ```sh
-uv python install 3.12 --preview --default
+uv python install 3.12 --default
 ```
 
 Now, running `uv python list` shows the version I installed and `which python` confirms my `PATH` now includes the uv-managed Python executable. Now I can run `python` anywhere in my shell and be sure that I'm executing _only_ uv-managed Python installations.
