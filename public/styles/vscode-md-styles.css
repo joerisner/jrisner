@@ -6,13 +6,13 @@ body {
 }
 
 a {
-  color: #82aaff;
+  color: #c792ea;
   text-decoration: none;
 }
 
 strong {
   font-weight: 550;
-  color: #ffcb6b;
+  color: #ffeb95;
 }
 
 code {
@@ -32,14 +32,17 @@ pre {
   background-color: rgba(255, 255, 255, 0.064);
 }
 
-h1,
-h2,
-h3,
 code {
-  color: #ff475a;
+  color: #f78c6c;
+}
+
+h2,
+h3 {
+  color: #ff5874;
 }
 
 h1 {
+  color: #80cbc4;
   font-size: 2rem;
   margin: 0.67rem 0;
 }
@@ -50,10 +53,8 @@ h2 {
 
 h3 {
   font-size: 1.2rem;
-  margin-left: 1rem;
 }
 
-h3,
 blockquote {
   font-style: italic;
 }
