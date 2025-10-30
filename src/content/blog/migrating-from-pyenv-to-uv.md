@@ -48,7 +48,7 @@ export UV_CONFIG_FILE="${UV_DIR}/uv.toml"
 export UV_PYTHON_INSTALL_DIR="${UV_DIR}/python/versions"
 export UV_PYTHON_BIN_DIR="${UV_DIR}/python/bin"
 export UV_TOOL_DIR="${UV_DIR}/tools"
-export UV_TOOL_BIN_DIR="${UV_DIR}/tools/bin"
+export UV_TOOL_BIN_DIR="${UV_DIR}/bin"
 export PATH="${UV_PYTHON_BIN_DIR}:${UV_TOOL_BIN_DIR}:${PATH}"
 ```
 
@@ -57,7 +57,7 @@ export PATH="${UV_PYTHON_BIN_DIR}:${UV_TOOL_BIN_DIR}:${PATH}"
 - `UV_PYTHON_INSTALL_DIR`: Install all Python versions in `$HOME/.uv/python/versions`.
 - `UV_PYTHON_BIN_DIR`: Use `$HOME/.uv/python/bin` as the directory for symlinks to Python executables.
 - `UV_TOOL_DIR`: Install all uv tools in `$HOME/.uv/tools`.
-- `UV_TOOL_BIN_DIR`: Use `$HOME/.uv/tools/bin` as the directory for symlinks to uv tool executables.
+- `UV_TOOL_BIN_DIR`: Use `$HOME/.uv/bin` as the directory for symlinks to uv tool executables.
 - `PATH`: Prepend `UV_PYTHON_BIN_DIR` and `UV_TOOL_BIN_DIR` to my `PATH` to enable `python` and tool executables.
 
 After configuring the `.uv` directory, I added the following preferences as ENV vars.
