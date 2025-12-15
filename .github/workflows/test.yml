@@ -23,7 +23,7 @@ jobs:
         run: npx playwright install --with-deps
       - name: run tests
         run: make test
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v6
         if: ${{ failure() }}
         with:
           path: |
