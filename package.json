@@ -11,7 +11,7 @@
     "test:ui": "playwright test --ui"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.5",
+    "@astrojs/check": "^0.9.8",
     "@astrojs/sitemap": "^3.7.1",
     "@astrojs/tailwind": "^6.0.2",
     "@playwright/test": "^1.58.2",
