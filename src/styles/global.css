@@ -1,6 +1,18 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+@import "tailwindcss";
+
+@theme {
+  --color-default: #f1f5f9;
+  --color-muted: #94a3b8;
+  --color-primary: #8b5cf6;
+  --color-secondary: #ffa28b;
+  --color-tertiary: #12b7bb;
+  --container-article: 850px;
+  --font-primary: [ "Inter", ...fontFamily.sans];
+  --font-code: [ "Fira Code", ...fontFamily.mono];
+}
 
 @layer base {
   p {
