@@ -1,12 +1,9 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  integrations: [
-    sitemap(),
-    tailwind({ applyBaseStyles: false }) // Importing these already in src/styles/global.css
-  ],
+  integrations: [sitemap()],
   markdown: {
     shikiConfig: {
       theme: 'material-theme-palenight',
@@ -22,6 +19,7 @@ export default defineConfig({
           assetFileNames: 'assets/[hash][extname]'
         }
       }
-    }
+    },
+    plugins: [tailwindcss()]
   }
 });
