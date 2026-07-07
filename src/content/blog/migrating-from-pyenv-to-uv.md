@@ -4,7 +4,7 @@ heroImage: '/images/starry-night.webp'
 isDraft: false
 publishDate: '2024-12-27'
 tags: ['python']
-title: 'Managing Python versions with uv'
+title: 'Managing Python Versions with uv'
 ---
 
 ## Why use a tool for managing Python versions?
