@@ -56,3 +56,31 @@ my_str = "Hello"
 found_in_str = "l" in my_str.lower() # True
 index = my_str.index("l") if found_in_str else -1 # Returns: 2
 ```
+
+## [Character Operations](#character-operations)
+
+_Find the ASCII ordinal number of a character._
+
+```python
+print(ord("A"))  # 65
+```
+
+_Convert an ASCII ordinal number to its character._
+
+```python
+print(chr(65))  # "A"
+print(chr(ord("A") + 1)) # "B"
+```
+
+_Determine types of characters._
+
+```python
+print("C".isalpha())     # True (all alpha chars)
+print("C++".isalpha())   # False
+print("239".isdigit())   # True (all numeric chars)
+print("C239".isdigit())  # False
+print("C98".isalnum())   # True (all alphanumeric chars)
+print("C98++".isalnum()) # False
+print("c".islower())     # True (all lowercase)
+print("cRx".islower())   # False
+```
