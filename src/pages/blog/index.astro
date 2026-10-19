@@ -12,20 +12,18 @@ const posts = publishPosts.sort((a, b) => b.data.publishDate.valueOf() - a.data.
   <h1 class="text-3xl font-bold md:text-5xl">Posts</h1>
   <section>
     <ul class="divide-y divide-slate-700">
-      {
-        posts.map(({ data, id: slug }) => (
-          <li class="py-8 md:py-12">
-            <BlogPostCard
-              title={data.title}
-              description={data.description}
-              image={data.heroImage}
-              publishDate={data.publishDate}
-              tags={data.tags}
-              target={`/blog/${slug}`}
-            />
-          </li>
-        ))
-      }
+      {posts.map(({ data, id: slug }) => (
+        <li class="py-8 md:py-12">
+          <BlogPostCard
+            title={data.title}
+            description={data.description}
+            image={data.heroImage}
+            publishDate={data.publishDate}
+            tags={data.tags}
+            target={`/blog/${slug}`}
+          />
+        </li>
+      ))}
     </ul>
   </section>
 </BaseLayout>
