@@ -33,13 +33,11 @@ const { title, description, image, publishDate, tags, target } = Astro.props;
       </time>
       <p data-testid="postDescription">{description}</p>
       <ul class="flex flex-wrap gap-4">
-        {
-          tags.map((tag) => (
-            <li>
-              <span class="rounded bg-primary px-2 py-1 text-base text-black">{tag}</span>
-            </li>
-          ))
-        }
+        {tags.map((tag) => (
+          <li>
+            <span class="rounded bg-primary px-2 py-1 text-base text-black">{tag}</span>
+          </li>
+        ))}
       </ul>
     </div>
   </div>

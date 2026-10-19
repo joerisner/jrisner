@@ -26,17 +26,15 @@ const groupedCheatSheets = CHEAT_SHEET_TYPES.map((type) => ({ type, content: fil
   <h1 class="text-3xl font-bold md:text-5xl">Cheat Sheets</h1>
   <hr class="mt-4 border-slate-700 md:mt-6" />
   <section class="my-4">
-    {
-      groupedCheatSheets.map((group) => (
-        <div>
-          <h2 class="pl-2 text-xl font-bold text-secondary md:text-2xl">{group.type}</h2>
-          <div class="my-4 grid gap-4 sm:grid-cols-2 md:my-6 lg:grid-cols-3 lg:gap-6">
-            {group.content.map((entry) => (
-              <Panel title="Cheat Sheet" body={entry.data.title} target={`/cheat-sheets/${entry.id}`} />
-            ))}
-          </div>
+    {groupedCheatSheets.map((group) => (
+      <div>
+        <h2 class="pl-2 text-xl font-bold text-secondary md:text-2xl">{group.type}</h2>
+        <div class="my-4 grid gap-4 sm:grid-cols-2 md:my-6 lg:grid-cols-3 lg:gap-6">
+          {group.content.map((entry) => (
+            <Panel title="Cheat Sheet" body={entry.data.title} target={`/cheat-sheets/${entry.id}`} />
+          ))}
         </div>
-      ))
-    }
+      </div>
+    ))}
   </section>
 </BaseLayout>
