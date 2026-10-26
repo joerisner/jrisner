@@ -18,7 +18,7 @@
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.4.0",
     "autoprefixer": "^10.6.1",
-    "eslint": "^10.12.0",
+    "eslint": "^10.13.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.7",
     "markdownlint-cli": "^0.49.1",
