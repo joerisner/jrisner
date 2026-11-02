@@ -76,4 +76,7 @@ my_dict = {"make": "toyota", "model": "supra", "year": 1997}
 
 my_dict.keys()   # dict_keys(['make', 'model', 'year'])
 my_dict.values() # dict_values(['toyota', 'supra', 1997])
+
+# Return a list of keys (not a dict_keys instance):
+list(my_dict)    # ['make', 'model', 'year']
 ```
