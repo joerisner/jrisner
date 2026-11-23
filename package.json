@@ -16,7 +16,7 @@
     "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.65.0",
     "@tailwindcss/vite": "^4.3.5",
-    "astro": "^7.4.11",
+    "astro": "^7.4.13",
     "autoprefixer": "^10.6.2",
     "eslint": "^10.14.0",
     "eslint-config-prettier": "^10.1.8",
